@@ -31,12 +31,12 @@ public class TriathlonController {
         return new ResponseEntity<>(triathlonRepository.findAll(), HttpStatus.OK);
     }
 
-    @PostMapping("runs")
-    public ResponseEntity<Triathlon> addRun(@RequestBody Triathlon triathlon) {
+    @PostMapping("triathlons")
+    public ResponseEntity<Triathlon> addTriathlon(@RequestBody Triathlon triathlon) {
         return new ResponseEntity<Triathlon>(triathlonRepository.save(triathlon), HttpStatus.OK);
     }
 
-    @RequestMapping("runs/findById/{runId}")
+    @RequestMapping("triathlons/findById/{triathlonId}")
     public ResponseEntity<Triathlon> findById(@PathVariable long triathlonId) {
         return ResponseEntity.ok(triathlonRepository.findById(triathlonId));
     }

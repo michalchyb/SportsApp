@@ -30,12 +30,9 @@ public abstract class Sport {
     @NotNull
     @Size(min = 5)
     private String nameRun;
-    @NotEmpty
     @NotNull
     @Positive
     private double distance = 0.0;
-    @NotEmpty
-    @NotNull
     private Date date;
     private String myTime;
     @NotEmpty

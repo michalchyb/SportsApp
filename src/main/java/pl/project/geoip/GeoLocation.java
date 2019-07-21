@@ -16,7 +16,7 @@ public class GeoLocation {
 	private float longitude;
 
 	public GeoLocation(String countryCode, String countryName, String postalCode, String city, String region,
-			int areaCode, int dmaCode, int metroCode, float latitude, float longitude) {
+					   int areaCode, int dmaCode, int metroCode, float latitude, float longitude) {
 		this.countryCode = countryCode;
 		this.countryName = countryName;
 		this.postalCode = postalCode;
