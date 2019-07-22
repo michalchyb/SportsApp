@@ -13,20 +13,20 @@ public class GeoHelpers {
     private static final Logger logger = LogManager.getLogger(SportsApp.class);
     private static final String URL_NAME = "http://bot.whatismyipaddress.com";
 
-    public static String getCurrentIpAddress() throws UnknownHostException {
+    public static String getHostIpAddress() throws UnknownHostException {
         InetAddress localhost = InetAddress.getLocalHost();
-        String systemipaddress = "";
+        String hostIpAddress = "";
 
         try {
             URL urlName = new URL(URL_NAME);
 
             try (BufferedReader sc = new BufferedReader(new InputStreamReader(urlName.openStream()))) {
-                systemipaddress = sc.readLine().trim();
+                hostIpAddress = sc.readLine().trim();
             }
         } catch (Exception e) {
-            systemipaddress = "Cannot Execute Properly";
+            hostIpAddress = "Cannot Execute";
         }
-        return systemipaddress;
+        return hostIpAddress;
     }
 }
 

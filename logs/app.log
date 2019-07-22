@@ -1441,3 +1441,24 @@ java.lang.NumberFormatException: Test
 2019-07-21 16:44:51,101 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
 2019-07-21 16:44:51,102 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
 2019-07-21 16:45:02,842 INFO p.p.SportsApp [main] Started SportsApp in 12.358 seconds (JVM running for 14.416)
+2019-07-22 19:40:00,720 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 28179 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-22 19:40:00,802 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-22 19:40:00,803 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-22 19:42:19,047 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 28377 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-22 19:42:19,057 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-22 19:42:19,062 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-22 19:45:39,627 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 28592 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-22 19:45:39,638 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-22 19:45:39,640 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-22 19:48:34,589 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 28716 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-22 19:48:34,648 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-22 19:48:34,651 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-22 19:49:52,293 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 28792 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-22 19:49:52,313 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-22 19:49:52,316 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-22 19:50:52,170 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 28862 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-22 19:50:52,184 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-22 19:50:52,186 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-22 20:16:18,467 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 29412 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-22 20:16:18,478 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-22 20:16:18,480 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
