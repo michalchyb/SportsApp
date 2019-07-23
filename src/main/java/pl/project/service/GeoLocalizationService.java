@@ -14,9 +14,9 @@ import java.net.InetAddress;
 @Service
 public class GeoLocalizationService {
 
+    private static final String PATH_GEOLITECITY_DATABASE = "/home/michalch/IdeaProjects/SportsApp/src/main/resources/GeoLite2-City.mmdb";
     private DatabaseReader dataBaseReader;
 
-    private static final String PATH_GEOLITECITY_DATABASE = "/home/michalch/IdeaProjects/SportsApp/src/main/resources/GeoLite2-City.mmdb";
 
     public GeoLocalizationService() throws IOException {
         File database = new File(PATH_GEOLITECITY_DATABASE);
