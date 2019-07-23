@@ -1,6 +1,10 @@
 package pl.project.controller;
 
-import org.springframework.web.bind.annotation.*;
+import com.maxmind.geoip2.exception.GeoIp2Exception;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import pl.project.entity.geo.GeoLocalization;
 import pl.project.service.GeoLocalizationService;
 import pl.project.utils.geo.GeoHelpers;
@@ -12,14 +16,15 @@ import java.io.IOException;
 @RequestMapping("/api/")
 public class HomeController {
 
-    public HomeController(GeoLocalizationService geoLocalizationService) throws IOException {
-        geoLocalizationService = new GeoLocalizationService();
+    private GeoLocalizationService geoLocalization;
+
+    public HomeController(GeoLocalizationService geoLocalization) {
+        this.geoLocalization = geoLocalization;
     }
 
-    @PostMapping("/location")
-    public GeoLocalization getLocation() throws Exception {
+    @GetMapping("location")
+    public GeoLocalization getLocation() throws IOException, GeoIp2Exception {
 
-        GeoLocalizationService locationService = new GeoLocalizationService();
-        return locationService.getLocation(GeoHelpers.getHostIpAddress());
+        return geoLocalization.getLocation(GeoHelpers.getHostIpAddress());
     }
 }

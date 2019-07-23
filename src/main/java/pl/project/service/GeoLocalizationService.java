@@ -16,7 +16,7 @@ public class GeoLocalizationService {
 
     private DatabaseReader dataBaseReader;
 
-    private static final String PATH_GEOLITECITY_DATABASE = "/home/michalch/IdeaProjects/SportsApp/src/main/resources/GeoLiteCity.dat";
+    private static final String PATH_GEOLITECITY_DATABASE = "/home/michalch/IdeaProjects/SportsApp/src/main/resources/GeoLite2-City.mmdb";
 
     public GeoLocalizationService() throws IOException {
         File database = new File(PATH_GEOLITECITY_DATABASE);
