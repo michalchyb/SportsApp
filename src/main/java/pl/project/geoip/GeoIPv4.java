@@ -10,7 +10,8 @@ import pl.project.SportsApp;
 
 public class GeoIPv4 {
     private static final Logger logger = LogManager.getLogger(SportsApp.class);
-
+    private static final String DATABASE_LOADED = "GeoIP Database loaded: ";
+    private static final String ERROR_DATABASE_LOADING = "Could not load geo ip database: ";
     private static LookupService lookupService;
 
     static {
@@ -18,9 +19,9 @@ public class GeoIPv4 {
             lookupService = new LookupService(GeoIPv4.class.getResource("/GeoLiteCity.dat").getFile(),
                     LookupService.GEOIP_MEMORY_CACHE);
 
-            logger.debug("GeoIP Database loaded: " + lookupService.getDatabaseInfo());
+            logger.debug(DATABASE_LOADED + lookupService.getDatabaseInfo());
         } catch (IOException e) {
-            logger.debug("Could not load geo ip database: " + e.getMessage());
+            logger.debug(ERROR_DATABASE_LOADING + e.getMessage());
         }
     }
 

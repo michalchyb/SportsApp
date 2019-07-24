@@ -1567,3 +1567,123 @@ Caused by: java.net.BindException: Address already in use
 2019-07-23 20:11:49,671 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
 2019-07-23 20:11:49,672 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
 2019-07-23 20:12:06,628 INFO p.p.SportsApp [main] Started SportsApp in 19.778 seconds (JVM running for 25.007)
+2019-07-24 17:36:44,915 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 8264 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 17:36:44,955 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 17:36:44,956 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 17:37:23,774 INFO p.p.SportsApp [main] Started SportsApp in 41.201 seconds (JVM running for 49.296)
+2019-07-24 18:02:01,212 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 10396 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 18:02:01,261 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 18:02:01,263 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 18:03:19,329 INFO p.p.SportsApp [main] Started SportsApp in 82.374 seconds (JVM running for 99.408)
+2019-07-24 18:10:13,220 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 10847 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 18:10:13,230 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 18:10:13,231 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 18:10:41,930 INFO p.p.SportsApp [main] Started SportsApp in 33.316 seconds (JVM running for 42.873)
+2019-07-24 18:24:51,960 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 11751 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 18:24:51,990 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 18:24:52,011 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 18:25:31,190 INFO p.p.SportsApp [main] Started SportsApp in 41.845 seconds (JVM running for 46.391)
+2019-07-24 18:29:05,820 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 12089 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 18:29:05,831 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 18:29:05,832 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 18:29:35,429 INFO p.p.SportsApp [main] Started SportsApp in 33.707 seconds (JVM running for 44.106)
+2019-07-24 18:34:44,820 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 12704 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 18:34:44,862 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 18:34:44,864 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 18:35:08,769 INFO p.p.SportsApp [main] Started SportsApp in 27.537 seconds (JVM running for 32.91)
+2019-07-24 18:42:46,152 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 13636 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 18:42:46,167 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 18:42:46,169 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 18:43:09,848 INFO p.p.SportsApp [main] Started SportsApp in 24.527 seconds (JVM running for 27.327)
+2019-07-24 18:51:27,937 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 14382 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 18:51:28,020 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 18:51:28,021 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 18:51:49,008 INFO p.p.SportsApp [main] Started SportsApp in 24.999 seconds (JVM running for 34.913)
+2019-07-24 18:56:27,624 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 14682 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 18:56:27,637 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 18:56:27,639 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 18:56:53,737 INFO p.p.SportsApp [main] Started SportsApp in 27.35 seconds (JVM running for 29.782)
+2019-07-24 19:01:42,670 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 15094 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:01:42,681 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:01:42,682 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:02:13,716 INFO p.p.SportsApp [main] Started SportsApp in 33.287 seconds (JVM running for 42.688)
+2019-07-24 19:07:25,912 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 15691 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:07:25,951 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:07:25,952 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:07:41,490 INFO p.p.SportsApp [main] Started SportsApp in 17.737 seconds (JVM running for 22.667)
+2019-07-24 19:08:50,755 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 15820 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:08:50,764 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:08:50,765 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:09:08,721 INFO p.p.SportsApp [main] Started SportsApp in 18.641 seconds (JVM running for 20.795)
+2019-07-24 19:09:49,957 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 15949 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:09:49,968 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:09:49,969 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:10:05,981 INFO p.p.SportsApp [main] Started SportsApp in 16.783 seconds (JVM running for 18.839)
+2019-07-24 19:18:21,256 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 16328 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:18:21,268 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:18:21,269 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:18:38,810 INFO p.p.SportsApp [main] Started SportsApp in 18.472 seconds (JVM running for 20.85)
+2019-07-24 19:21:24,506 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 16640 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:21:24,532 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:21:24,534 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:21:51,795 INFO p.p.SportsApp [main] Started SportsApp in 28.543 seconds (JVM running for 35.272)
+2019-07-24 19:23:06,075 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 16810 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:23:06,109 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:23:06,120 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:23:32,958 INFO p.p.SportsApp [main] Started SportsApp in 28.644 seconds (JVM running for 31.411)
+2019-07-24 19:25:18,656 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 17074 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:25:18,676 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:25:18,678 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:25:33,430 INFO p.p.SportsApp [main] Started SportsApp in 16.185 seconds (JVM running for 18.81)
+2019-07-24 19:28:37,294 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 17306 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:28:37,374 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:28:37,375 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:29:01,484 INFO p.p.SportsApp [main] Started SportsApp in 26.626 seconds (JVM running for 30.293)
+2019-07-24 19:29:36,616 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 17593 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:29:36,643 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:29:36,645 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:30:01,032 INFO p.p.SportsApp [main] Started SportsApp in 25.18 seconds (JVM running for 27.409)
+2019-07-24 19:30:37,284 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 17799 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:30:37,294 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:30:37,295 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:30:58,299 INFO p.p.SportsApp [main] Started SportsApp in 21.803 seconds (JVM running for 24.039)
+2019-07-24 19:33:04,215 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 18014 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:33:04,230 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:33:04,232 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:33:25,609 INFO p.p.SportsApp [main] Started SportsApp in 22.229 seconds (JVM running for 24.612)
+2019-07-24 19:34:26,589 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 18167 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:34:26,605 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:34:26,607 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:34:48,932 INFO p.p.SportsApp [main] Started SportsApp in 23.171 seconds (JVM running for 25.5)
+2019-07-24 19:36:35,754 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 18484 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:36:35,765 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:36:35,767 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:36:58,762 INFO p.p.SportsApp [main] Started SportsApp in 23.88 seconds (JVM running for 26.467)
+2019-07-24 19:38:08,451 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 18712 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:38:08,464 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:38:08,465 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:38:29,463 INFO p.p.SportsApp [main] Started SportsApp in 21.848 seconds (JVM running for 24.619)
+2019-07-24 19:39:52,879 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 18980 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:39:52,895 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:39:52,897 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:40:06,242 INFO p.p.SportsApp [main] Started SportsApp in 14.488 seconds (JVM running for 17.619)
+2019-07-24 19:40:32,901 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 19100 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:40:32,930 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:40:32,932 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:40:59,763 INFO p.p.SportsApp [main] Started SportsApp in 27.786 seconds (JVM running for 31.093)
+2019-07-24 19:42:38,477 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 19258 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:42:38,518 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:42:38,519 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:42:52,059 INFO p.p.SportsApp [main] Started SportsApp in 15.185 seconds (JVM running for 24.23)
+2019-07-24 19:45:30,726 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 19550 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:45:30,753 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:45:30,755 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:45:53,068 INFO p.p.SportsApp [main] Started SportsApp in 23.41 seconds (JVM running for 25.896)
+2019-07-24 19:46:33,535 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 19684 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 19:46:33,543 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 19:46:33,545 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 19:46:52,522 INFO p.p.SportsApp [main] Started SportsApp in 19.937 seconds (JVM running for 22.157)
+2019-07-24 21:31:11,214 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 21169 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-07-24 21:31:11,297 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 21:31:11,301 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-07-24 21:31:44,792 INFO p.p.SportsApp [main] Started SportsApp in 38.834 seconds (JVM running for 51.638)

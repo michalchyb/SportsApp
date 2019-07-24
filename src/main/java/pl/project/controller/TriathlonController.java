@@ -33,7 +33,7 @@ public class TriathlonController {
 
     @PostMapping("triathlons")
     public ResponseEntity<Triathlon> addTriathlon(@RequestBody Triathlon triathlon) {
-        return new ResponseEntity<Triathlon>(triathlonRepository.save(triathlon), HttpStatus.OK);
+        return new ResponseEntity<>(triathlonRepository.save(triathlon), HttpStatus.OK);
     }
 
     @RequestMapping("triathlons/findById/{triathlonId}")

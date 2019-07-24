@@ -18,7 +18,7 @@ public class Triathlon extends Sport {
     private String t2;
     private String runTime;
 
-    public Triathlon(){};
+    public Triathlon() { };
 
     public Triathlon(String nameRun, double distance, Date date, String myTime, String city, long id, String swimTime, String t1, String bikeTime, String t2, String runTime) {
         super(nameRun, distance, date, myTime, city);

@@ -23,7 +23,7 @@ public class GeoLocalizationService {
         dataBaseReader = new DatabaseReader.Builder(database).build();
     }
 
-    public GeoLocalization getLocation(String hostIpAddress) throws IOException, GeoIp2Exception {
+    public GeoLocalization getLocation() throws IOException, GeoIp2Exception {
 
         InetAddress ipAddress = InetAddress.getByName(GeoHelpers.getHostIpAddress());
         CityResponse response = dataBaseReader.city(ipAddress);

@@ -33,7 +33,7 @@ public class RunController {
 
     @PostMapping("runs")
     public ResponseEntity<Run> addRun(@RequestBody Run run) {
-        return new ResponseEntity<Run>(runRepository.save(run), HttpStatus.OK);
+        return new ResponseEntity<>(runRepository.save(run), HttpStatus.OK);
     }
 
     @RequestMapping("runs/findById/{runId}")

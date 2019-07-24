@@ -12,6 +12,7 @@ import java.net.UnknownHostException;
 public class GeoHelpers {
     private static final Logger logger = LogManager.getLogger(SportsApp.class);
     private static final String URL_NAME = "http://bot.whatismyipaddress.com";
+    private static final String ERROR_EXECUTION = "Cannot Execute";
 
     public static String getHostIpAddress() throws UnknownHostException {
         InetAddress localhost = InetAddress.getLocalHost();
@@ -24,7 +25,7 @@ public class GeoHelpers {
                 hostIpAddress = sc.readLine().trim();
             }
         } catch (Exception e) {
-            hostIpAddress = "Cannot Execute";
+            hostIpAddress = ERROR_EXECUTION;
         }
         return hostIpAddress;
     }
