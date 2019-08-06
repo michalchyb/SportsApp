@@ -32,7 +32,7 @@ public class RunController {
     }
 
     @PostMapping("runs")
-    public ResponseEntity<Run> addRun(@RequestBody Run run) {
+    public ResponseEntity addRun(@RequestBody Run run) {
         return new ResponseEntity<>(runRepository.save(run), HttpStatus.OK);
     }
 

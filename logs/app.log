@@ -1687,3 +1687,10 @@ Caused by: java.net.BindException: Address already in use
 2019-07-24 21:31:11,297 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
 2019-07-24 21:31:11,301 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
 2019-07-24 21:31:44,792 INFO p.p.SportsApp [main] Started SportsApp in 38.834 seconds (JVM running for 51.638)
+2019-08-06 18:21:26,724 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 18315 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-08-06 18:21:26,776 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-08-06 18:21:26,778 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-08-06 18:34:49,478 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 18582 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-08-06 18:34:49,612 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-08-06 18:34:49,613 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-08-06 18:35:44,404 INFO p.p.SportsApp [main] Started SportsApp in 59.976 seconds (JVM running for 75.022)
