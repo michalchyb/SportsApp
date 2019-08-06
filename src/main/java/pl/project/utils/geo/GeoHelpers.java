@@ -3,6 +3,8 @@ package pl.project.utils.geo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import pl.project.SportsApp;
+import pl.project.entity.Run;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.InetAddress;
@@ -15,6 +17,7 @@ public class GeoHelpers {
     private static final String ERROR_EXECUTION = "Cannot Execute";
 
     public static String getHostIpAddress() throws UnknownHostException {
+
         InetAddress localhost = InetAddress.getLocalHost();
         String hostIpAddress = "";
 

@@ -4,96 +4,64 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
-import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Entity
 public class Run {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @NotEmpty
-    @NotNull
-    @Size(min = 5)
     private String nameRun;
-    @NotNull
-    @Positive
-    private double distance = 0.0;
+    private double distance;
     private Date date;
     private String myTime;
-    @NotEmpty
-    @NotNull
-    @Size(min = 3)
     private String city;
 
+    public static final class Builder {
 
+        private long id;
+        private String nameRun;
+        private double distance;
+        private Date date;
+        private String myTime;
+        private String city;
 
-    public long getId() {
-        return id;
-    }
+        public Builder id(long id) {
+            this.id = id;
+            return this;
+        }
 
-    public void setId(long id) {
-        this.id = id;
-    }
+        public Builder distance(double distance) {
+            this.distance = distance;
+            return this;
+        }
+        public Builder nameRun(String nameRun) {
+            this.nameRun = nameRun;
+            return this;
+        }
+        public Builder date(Date date) {
+            this.date = date;
+            return this;
+        }
+        public Builder myTime(String myTime) {
+            this.myTime = myTime;
+            return this;
+        }
+        public Builder city(String city) {
+            this.city = city;
+            return this;
+        }
 
-    public String getNameRun() {
-        return nameRun;
-    }
+        public Run build(){
+            Run run = new Run();
+            run.id = this.id;
+            run.nameRun = this.nameRun;
+            run.distance = this.distance;
+            run.date = this.date;
+            run.myTime = this.myTime;
+            run.city = this.city;
 
-    public void setNameRun(String nameRun) {
-        this.nameRun = nameRun;
-    }
-
-    public double getDistance() {
-        return distance;
-    }
-
-    public void setDistance(double distance) {
-        this.distance = distance;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public String getMyTime() {
-        return myTime;
-    }
-
-    public void setMyTime(String myTime) {
-        this.myTime = myTime;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    @Override
-    public String toString() {
-        return "Sport [nameRun=" + nameRun + ", distance=" + distance + ", date=" + date + ", myTime=" + myTime
-                + ", city=" + city + "]";
-    }
-
-    public Run(String nameRun, double distance, Date date, String myTime, String city) {
-        this.nameRun = nameRun;
-        this.distance = distance;
-        this.date = date;
-        this.myTime = myTime;
-        this.city = city;
-    }
-
-    public Run() {
+            return run;
+        }
     }
 }
