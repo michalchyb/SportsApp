@@ -1,5 +1,6 @@
 package pl.project.utils.geo;
 
+import pl.project.entity.Run;
 import pl.project.entity.weather.WeatherObject;
 
 public class WeatherHelpers {
