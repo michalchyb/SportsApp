@@ -5,7 +5,7 @@ import com.maxmind.geoip2.exception.GeoIp2Exception;
 import com.maxmind.geoip2.model.CityResponse;
 import org.springframework.stereotype.Service;
 import pl.project.entity.geo.GeoLocalization;
-import pl.project.utils.geo.GeoHelpers;
+import pl.project.utils.GeoHelpers;
 
 import java.io.File;
 import java.io.IOException;

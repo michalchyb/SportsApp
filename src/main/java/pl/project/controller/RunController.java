@@ -4,7 +4,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.project.entity.Run;
+import pl.project.entity.dtos.RunDTO;
 import pl.project.repository.RunRepository;
+import pl.project.service.RunService;
 
 import java.util.List;
 
@@ -14,15 +16,27 @@ import java.util.List;
 public class RunController {
 
     private RunRepository runRepository;
+    private RunService runService;
+//    public RunController(RunRepository runRepository) {
+//        this.runRepository = runRepository;
+//    }
 
-    public RunController(RunRepository runRepository) {
+    public RunController(RunRepository runRepository, RunService runService) {
         this.runRepository = runRepository;
+        this.runService = runService;
     }
 
     @GetMapping("runs")
     public ResponseEntity<List<Run>> getRuns() {
-        return new ResponseEntity<>(runRepository.findAll(), HttpStatus.OK);
+        return runService.getRuns();
     }
+
+
+    @GetMapping("dto/runs")
+    public List<RunDTO> getRunsDTO() {
+        return runService.getRunsDTO();
+    }
+
 
     @PostMapping("runs")
     public ResponseEntity addRun(@RequestBody Run run) {

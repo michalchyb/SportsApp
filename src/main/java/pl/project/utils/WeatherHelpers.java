@@ -1,4 +1,4 @@
-package pl.project.utils.geo;
+package pl.project.utils;
 
 import pl.project.entity.Run;
 import pl.project.entity.weather.WeatherObject;

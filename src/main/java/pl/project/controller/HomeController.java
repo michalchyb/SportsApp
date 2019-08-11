@@ -10,8 +10,7 @@ import pl.project.entity.geo.GeoLocalization;
 import pl.project.entity.weather.WeatherObject;
 import pl.project.service.GeoLocalizationService;
 import pl.project.service.WeatherService;
-import pl.project.utils.geo.GeoHelpers;
-import pl.project.utils.geo.WeatherHelpers;
+import pl.project.utils.WeatherHelpers;
 
 import java.io.IOException;
 
