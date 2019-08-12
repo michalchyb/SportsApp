@@ -17,9 +17,6 @@ public class RunController {
 
     private RunRepository runRepository;
     private RunService runService;
-//    public RunController(RunRepository runRepository) {
-//        this.runRepository = runRepository;
-//    }
 
     public RunController(RunRepository runRepository, RunService runService) {
         this.runRepository = runRepository;
@@ -37,10 +34,23 @@ public class RunController {
         return runService.getRunsDTO();
     }
 
-
     @PostMapping("runs")
     public ResponseEntity addRun(@RequestBody Run run) {
         return new ResponseEntity<>(runRepository.save(run), HttpStatus.OK);
+    }
+
+    @PostMapping("dto/runs")
+    public Run addRun(@RequestBody RunDTO runDTO) {
+        return runService.addRun(runDTO);
+    }
+
+    @PutMapping("dto/runs")
+    public void updateRun(@RequestBody RunDTO runDTO) {
+        runService.updateRun(runDTO);
+    }
+    @DeleteMapping("dto/runs{nameRun}")
+    public void deleteRun(@PathVariable String nameRun){
+        runService.deleteRun(nameRun);
     }
 
     @RequestMapping("runs/findById/{runId}")

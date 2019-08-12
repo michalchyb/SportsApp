@@ -32,8 +32,31 @@ public class RunService {
         return runRepository
                 .findAll()
                 .stream()
-                .map(runMapper::map )
+                .map(runMapper::map)
                 .collect(Collectors.toList());
     }
 
+    public Run addRun(RunDTO runDTO) {
+        return runRepository.save(runMapper.reverseMap(runDTO));
+    }
+
+    public void updateRun(RunDTO runDTO) {
+        runRepository.findRunByNameRun(runDTO.getNameRun())
+                .ifPresent(r -> {
+                    runDTO.setNameRun(runDTO.getNameRun());
+                    runDTO.setCity(runDTO.getCity());
+                    runDTO.setMyTime(runDTO.getMyTime());
+                    runDTO.setDate(runDTO.getDate());
+                    runDTO.setDistance(runDTO.getDistance());
+
+                    runRepository.save(r);
+                });
+
+    }
+
+    public void deleteRun(String runName) {
+        runRepository.deleteByNameRun(runName);
+    }
 }
+
+
