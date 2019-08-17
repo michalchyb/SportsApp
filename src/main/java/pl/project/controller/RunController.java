@@ -29,10 +29,10 @@ public class RunController {
     }
 
 
-    @GetMapping("dto/runs")
-    public List<RunDTO> getRunsDTO() {
-        return runService.getRunsDTO();
-    }
+//    @GetMapping("dto/runs")
+//    public List<RunDTO> getRunsDTO() {
+//        return runService.getRunsDTO();
+//    }
 
     @PostMapping("runs")
     public ResponseEntity addRun(@RequestBody Run run) {
@@ -48,8 +48,9 @@ public class RunController {
     public void updateRun(@RequestBody RunDTO runDTO) {
         runService.updateRun(runDTO);
     }
+
     @DeleteMapping("dto/runs{nameRun}")
-    public void deleteRun(@PathVariable String nameRun){
+    public void deleteRun(@PathVariable String nameRun) {
         runService.deleteRun(nameRun);
     }
 
@@ -62,5 +63,13 @@ public class RunController {
     public ResponseEntity<Run> deleteById(@PathVariable long runId) {
         runRepository.deleteById(runId);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("dto/runs")
+    public List<RunDTO> getRunsDTO(@RequestParam(value = "distance", required = false) Double distance) {
+        if (distance != null && distance > 0) {
+            return runService.getRunsByDistance(distance);
+        }
+        return runService.getRunsDTO();
     }
 }

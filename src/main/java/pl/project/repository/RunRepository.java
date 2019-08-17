@@ -3,6 +3,7 @@ package pl.project.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import pl.project.entity.Run;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface RunRepository extends JpaRepository<Run, Long> {
@@ -11,4 +12,6 @@ public interface RunRepository extends JpaRepository<Run, Long> {
     Optional<Run> findRunByNameRun(String runName);
 
     void deleteByNameRun(String runName);
+
+    List<Run> findRunsByDistance(Double distance);
 }

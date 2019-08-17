@@ -3376,3 +3376,11 @@ org.hibernate.InstantiationException: No default constructor for entity:  : pl.p
 2019-08-12 20:10:56,827 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
 2019-08-12 20:10:56,829 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
 2019-08-12 20:11:11,844 INFO p.p.SportsApp [main] Started SportsApp in 16.039 seconds (JVM running for 18.838)
+2019-08-17 11:36:07,669 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 6420 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-08-17 11:36:07,735 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-08-17 11:36:07,737 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-08-17 11:36:27,529 INFO p.p.SportsApp [main] Started SportsApp in 22.278 seconds (JVM running for 27.086)
+2019-08-17 12:55:17,056 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 9910 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-08-17 12:55:17,120 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-08-17 12:55:17,121 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-08-17 12:55:38,338 INFO p.p.SportsApp [main] Started SportsApp in 24.231 seconds (JVM running for 30.266)

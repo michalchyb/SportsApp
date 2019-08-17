@@ -57,6 +57,13 @@ public class RunService {
     public void deleteRun(String runName) {
         runRepository.deleteByNameRun(runName);
     }
+
+    public List<RunDTO> getRunsByDistance(Double distance) {
+        return runRepository.findRunsByDistance(distance)
+                .stream()
+                .map(runMapper::map)
+                .collect(Collectors.toList());
+    }
 }
 
 
