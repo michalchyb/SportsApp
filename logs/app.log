@@ -103,7 +103,7 @@ javax.validation.UnexpectedTypeException: HV000030: No validator could be found 
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy146.save(Unknown Source) ~[?:?]
-	at pl.project.controller.RunController.addRun(RunController.java:36) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:36) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_212]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_212]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_212]
@@ -244,7 +244,7 @@ javax.validation.UnexpectedTypeException: HV000030: No validator could be found 
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy146.save(Unknown Source) ~[?:?]
-	at pl.project.controller.RunController.addRun(RunController.java:36) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:36) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_212]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_212]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_212]
@@ -381,7 +381,7 @@ javax.validation.UnexpectedTypeException: HV000030: No validator could be found 
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy146.save(Unknown Source) ~[?:?]
-	at pl.project.controller.RunController.addRun(RunController.java:36) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:36) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_212]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_212]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_212]
@@ -518,7 +518,7 @@ javax.validation.UnexpectedTypeException: HV000030: No validator could be found 
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy146.save(Unknown Source) ~[?:?]
-	at pl.project.controller.RunController.addRun(RunController.java:36) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:36) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_212]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_212]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_212]
@@ -655,7 +655,7 @@ javax.validation.UnexpectedTypeException: HV000030: No validator could be found 
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy146.save(Unknown Source) ~[?:?]
-	at pl.project.controller.RunController.addRun(RunController.java:36) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:36) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_212]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_212]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_212]
@@ -792,7 +792,7 @@ javax.validation.UnexpectedTypeException: HV000030: No validator could be found 
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy146.save(Unknown Source) ~[?:?]
-	at pl.project.controller.RunController.addRun(RunController.java:36) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:36) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_212]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_212]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_212]
@@ -860,13 +860,13 @@ javax.validation.UnexpectedTypeException: HV000030: No validator could be found 
 2019-07-21 15:21:41,357 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
 2019-07-21 15:21:41,358 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
 2019-07-21 15:21:53,693 INFO p.p.SportsApp [main] Started SportsApp in 13.172 seconds (JVM running for 22.832)
-2019-07-21 15:40:35,382 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is javax.validation.ConstraintViolationException: Validation failed for classes [pl.project.entity.Triathlon] during persist time for groups [javax.validation.groups.Default, ]
+2019-07-21 15:40:35,382 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is javax.validation.ConstraintViolationException: Validation failed for classes [pl.project.models.Triathlon] during persist time for groups [javax.validation.groups.Default, ]
 List of constraint violations:[
-	ConstraintViolationImpl{interpolatedMessage='must be greater than 0', propertyPath=distance, rootBeanClass=class pl.project.entity.Triathlon, messageTemplate='{javax.validation.constraints.Positive.message}'}
+	ConstraintViolationImpl{interpolatedMessage='must be greater than 0', propertyPath=distance, rootBeanClass=class pl.project.models.Triathlon, messageTemplate='{javax.validation.constraints.Positive.message}'}
 ]] with root cause
-javax.validation.ConstraintViolationException: Validation failed for classes [pl.project.entity.Triathlon] during persist time for groups [javax.validation.groups.Default, ]
+javax.validation.ConstraintViolationException: Validation failed for classes [pl.project.models.Triathlon] during persist time for groups [javax.validation.groups.Default, ]
 List of constraint violations:[
-	ConstraintViolationImpl{interpolatedMessage='must be greater than 0', propertyPath=distance, rootBeanClass=class pl.project.entity.Triathlon, messageTemplate='{javax.validation.constraints.Positive.message}'}
+	ConstraintViolationImpl{interpolatedMessage='must be greater than 0', propertyPath=distance, rootBeanClass=class pl.project.models.Triathlon, messageTemplate='{javax.validation.constraints.Positive.message}'}
 ]
 	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140) ~[hibernate-core-5.3.10.Final.jar:5.3.10.Final]
 	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:80) ~[hibernate-core-5.3.10.Final.jar:5.3.10.Final]
@@ -926,7 +926,7 @@ List of constraint violations:[
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy149.save(Unknown Source) ~[?:?]
-	at pl.project.controller.TriathlonController.addTriathlon(TriathlonController.java:36) ~[classes/:?]
+	at pl.project.controllers.TriathlonController.addTriathlon(TriathlonController.java:36) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_212]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_212]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_212]
@@ -1010,8 +1010,8 @@ List of constraint violations:[
 2019-07-21 16:16:13,640 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
 2019-07-21 16:16:13,642 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
 2019-07-21 16:16:33,834 INFO p.p.SportsApp [main] Started SportsApp in 21.252 seconds (JVM running for 24.304)
-2019-07-21 16:17:11,006 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: No default constructor for entity:  : pl.project.entity.Triathlon; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : pl.project.entity.Triathlon] with root cause
-org.hibernate.InstantiationException: No default constructor for entity:  : pl.project.entity.Triathlon
+2019-07-21 16:17:11,006 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: No default constructor for entity:  : pl.project.models.Triathlon; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : pl.project.models.Triathlon] with root cause
+org.hibernate.InstantiationException: No default constructor for entity:  : pl.project.models.Triathlon
 	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:85) ~[hibernate-core-5.3.10.Final.jar:5.3.10.Final]
 	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:105) ~[hibernate-core-5.3.10.Final.jar:5.3.10.Final]
 	at org.hibernate.tuple.entity.AbstractEntityTuplizer.instantiate(AbstractEntityTuplizer.java:673) ~[hibernate-core-5.3.10.Final.jar:5.3.10.Final]
@@ -1085,7 +1085,7 @@ org.hibernate.InstantiationException: No default constructor for entity:  : pl.p
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy129.save(Unknown Source) ~[?:?]
-	at pl.project.controller.TriathlonController.addTriathlon(TriathlonController.java:36) ~[classes/:?]
+	at pl.project.controllers.TriathlonController.addTriathlon(TriathlonController.java:36) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_212]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_212]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_212]
@@ -1159,7 +1159,7 @@ org.hibernate.InstantiationException: No default constructor for entity:  : pl.p
 2019-07-21 16:25:19,553 INFO p.p.SportsApp [main] Started SportsApp in 25.902 seconds (JVM running for 28.553)
 2019-07-21 16:25:33,723 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException] with root cause
 java.lang.NumberFormatException: null
-	at pl.project.controller.RunController.addRun(RunController.java:37) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:37) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_212]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_212]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_212]
@@ -1229,7 +1229,7 @@ java.lang.NumberFormatException: null
 2019-07-21 16:27:32,992 INFO p.p.SportsApp [main] Started SportsApp in 21.487 seconds (JVM running for 24.679)
 2019-07-21 16:27:36,576 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException] with root cause
 java.lang.NumberFormatException: null
-	at pl.project.controller.RunController.addRun(RunController.java:37) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:37) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_212]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_212]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_212]
@@ -1299,7 +1299,7 @@ java.lang.NumberFormatException: null
 2019-07-21 16:29:06,550 INFO p.p.SportsApp [main] Started SportsApp in 17.823 seconds (JVM running for 22.88)
 2019-07-21 16:30:35,087 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException] with root cause
 java.lang.NumberFormatException: null
-	at pl.project.controller.RunController.addRun(RunController.java:39) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:39) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_212]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_212]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_212]
@@ -1369,7 +1369,7 @@ java.lang.NumberFormatException: null
 2019-07-21 16:32:02,117 INFO p.p.SportsApp [main] Started SportsApp in 23.554 seconds (JVM running for 26.409)
 2019-07-21 16:33:54,896 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException: Test] with root cause
 java.lang.NumberFormatException: Test
-	at pl.project.controller.RunController.addRun(RunController.java:39) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:39) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_212]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_212]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_212]
@@ -1773,7 +1773,7 @@ java.sql.SQLIntegrityConstraintViolationException: Column 'city' cannot be null
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy126.save(Unknown Source) ~[?:?]
-	at pl.project.controller.RunController.addRun(RunController.java:36) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:36) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_222]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_222]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_222]
@@ -1909,7 +1909,7 @@ java.sql.SQLIntegrityConstraintViolationException: Column 'city' cannot be null
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy126.save(Unknown Source) ~[?:?]
-	at pl.project.controller.RunController.addRun(RunController.java:36) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:36) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_222]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_222]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_222]
@@ -2045,7 +2045,7 @@ java.sql.SQLIntegrityConstraintViolationException: Column 'city' cannot be null
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy126.save(Unknown Source) ~[?:?]
-	at pl.project.controller.RunController.addRun(RunController.java:36) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:36) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_222]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_222]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_222]
@@ -2185,7 +2185,7 @@ java.sql.SQLIntegrityConstraintViolationException: Column 'city' cannot be null
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy126.save(Unknown Source) ~[?:?]
-	at pl.project.controller.RunController.addRun(RunController.java:36) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:36) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_222]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_222]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_222]
@@ -2321,7 +2321,7 @@ java.sql.SQLIntegrityConstraintViolationException: Column 'city' cannot be null
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy126.save(Unknown Source) ~[?:?]
-	at pl.project.controller.RunController.addRun(RunController.java:36) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:36) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_222]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_222]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_222]
@@ -2461,7 +2461,7 @@ java.sql.SQLIntegrityConstraintViolationException: Column 'city' cannot be null
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy126.save(Unknown Source) ~[?:?]
-	at pl.project.controller.RunController.addRun(RunController.java:36) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:36) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_222]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_222]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_222]
@@ -2601,7 +2601,7 @@ java.sql.SQLIntegrityConstraintViolationException: Column 'city' cannot be null
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy126.save(Unknown Source) ~[?:?]
-	at pl.project.controller.RunController.addRun(RunController.java:29) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:29) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_222]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_222]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_222]
@@ -2741,7 +2741,7 @@ java.sql.SQLIntegrityConstraintViolationException: Column 'city' cannot be null
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy126.save(Unknown Source) ~[?:?]
-	at pl.project.controller.RunController.addRun(RunController.java:29) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:29) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_222]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_222]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_222]
@@ -2881,7 +2881,7 @@ java.sql.SQLIntegrityConstraintViolationException: Column 'city' cannot be null
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy126.save(Unknown Source) ~[?:?]
-	at pl.project.controller.RunController.addRun(RunController.java:30) ~[classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:30) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_222]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_222]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_222]
@@ -2945,13 +2945,13 @@ java.sql.SQLIntegrityConstraintViolationException: Column 'city' cannot be null
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_222]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.21.jar:9.0.21]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_222]
-2019-08-07 18:12:38,166 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is javax.validation.ConstraintViolationException: Validation failed for classes [pl.project.entity.Triathlon] during persist time for groups [javax.validation.groups.Default, ]
+2019-08-07 18:12:38,166 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is javax.validation.ConstraintViolationException: Validation failed for classes [pl.project.models.Triathlon] during persist time for groups [javax.validation.groups.Default, ]
 List of constraint violations:[
-	ConstraintViolationImpl{interpolatedMessage='size must be between 5 and 2147483647', propertyPath=nameRun, rootBeanClass=class pl.project.entity.Triathlon, messageTemplate='{javax.validation.constraints.Size.message}'}
+	ConstraintViolationImpl{interpolatedMessage='size must be between 5 and 2147483647', propertyPath=nameRun, rootBeanClass=class pl.project.models.Triathlon, messageTemplate='{javax.validation.constraints.Size.message}'}
 ]] with root cause
-javax.validation.ConstraintViolationException: Validation failed for classes [pl.project.entity.Triathlon] during persist time for groups [javax.validation.groups.Default, ]
+javax.validation.ConstraintViolationException: Validation failed for classes [pl.project.models.Triathlon] during persist time for groups [javax.validation.groups.Default, ]
 List of constraint violations:[
-	ConstraintViolationImpl{interpolatedMessage='size must be between 5 and 2147483647', propertyPath=nameRun, rootBeanClass=class pl.project.entity.Triathlon, messageTemplate='{javax.validation.constraints.Size.message}'}
+	ConstraintViolationImpl{interpolatedMessage='size must be between 5 and 2147483647', propertyPath=nameRun, rootBeanClass=class pl.project.models.Triathlon, messageTemplate='{javax.validation.constraints.Size.message}'}
 ]
 	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140) ~[hibernate-core-5.3.10.Final.jar:5.3.10.Final]
 	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:80) ~[hibernate-core-5.3.10.Final.jar:5.3.10.Final]
@@ -3010,7 +3010,7 @@ List of constraint violations:[
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy129.save(Unknown Source) ~[?:?]
-	at pl.project.controller.TriathlonController.addTriathlon(TriathlonController.java:36) ~[classes/:?]
+	at pl.project.controllers.TriathlonController.addTriathlon(TriathlonController.java:36) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_222]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_222]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_222]
@@ -3125,7 +3125,7 @@ javax.persistence.PersistenceException: org.hibernate.service.UnknownServiceExce
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) [spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy126.save(Unknown Source) [?:?]
-	at pl.project.controller.RunController.addRun(RunController.java:29) [classes/:?]
+	at pl.project.controllers.RunController.addRun(RunController.java:29) [classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_222]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_222]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_222]
@@ -3222,8 +3222,8 @@ Caused by: org.hibernate.service.UnknownServiceException: Unknown service reques
 2019-08-07 18:40:38,478 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
 2019-08-07 18:40:38,479 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
 2019-08-07 18:41:09,527 INFO p.p.SportsApp [main] Started SportsApp in 34.789 seconds (JVM running for 40.426)
-2019-08-07 18:42:32,681 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: No default constructor for entity:  : pl.project.entity.Run; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : pl.project.entity.Run] with root cause
-org.hibernate.InstantiationException: No default constructor for entity:  : pl.project.entity.Run
+2019-08-07 18:42:32,681 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: No default constructor for entity:  : pl.project.models.Run; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : pl.project.models.Run] with root cause
+org.hibernate.InstantiationException: No default constructor for entity:  : pl.project.models.Run
 	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:85) ~[hibernate-core-5.3.10.Final.jar:5.3.10.Final]
 	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:105) ~[hibernate-core-5.3.10.Final.jar:5.3.10.Final]
 	at org.hibernate.tuple.entity.AbstractEntityTuplizer.instantiate(AbstractEntityTuplizer.java:673) ~[hibernate-core-5.3.10.Final.jar:5.3.10.Final]
@@ -3276,7 +3276,7 @@ org.hibernate.InstantiationException: No default constructor for entity:  : pl.p
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy126.findAll(Unknown Source) ~[?:?]
-	at pl.project.controller.RunController.getRuns(RunController.java:24) ~[classes/:?]
+	at pl.project.controllers.RunController.getRuns(RunController.java:24) ~[classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_222]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_222]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_222]
@@ -3384,3 +3384,7 @@ org.hibernate.InstantiationException: No default constructor for entity:  : pl.p
 2019-08-17 12:55:17,120 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
 2019-08-17 12:55:17,121 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
 2019-08-17 12:55:38,338 INFO p.p.SportsApp [main] Started SportsApp in 24.231 seconds (JVM running for 30.266)
+2019-08-18 19:11:03,611 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 24062 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-08-18 19:11:03,640 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-08-18 19:11:03,641 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-08-18 19:11:25,666 INFO p.p.SportsApp [main] Started SportsApp in 25.582 seconds (JVM running for 32.877)

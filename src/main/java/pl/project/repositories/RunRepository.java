@@ -1,0 +1,17 @@
+package pl.project.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import pl.project.models.Run;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface RunRepository extends JpaRepository<Run, Long> {
+    Run findById(long id);
+
+    Optional<Run> findRunByNameRun(String runName);
+
+    void deleteByNameRun(String runName);
+
+    List<Run> findRunsByDistance(Double distance);
+}
