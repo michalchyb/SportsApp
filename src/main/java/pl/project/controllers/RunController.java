@@ -28,12 +28,6 @@ public class RunController {
         return runService.getRuns();
     }
 
-
-//    @GetMapping("dto/runs")
-//    public List<RunDTO> getRunsDTO() {
-//        return runService.getRunsDTO();
-//    }
-
     @PostMapping("runs")
     public ResponseEntity addRun(@RequestBody Run run) {
         return new ResponseEntity<>(runRepository.save(run), HttpStatus.OK);
