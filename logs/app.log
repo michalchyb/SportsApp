@@ -3388,3 +3388,16 @@ org.hibernate.InstantiationException: No default constructor for entity:  : pl.p
 2019-08-18 19:11:03,640 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
 2019-08-18 19:11:03,641 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
 2019-08-18 19:11:25,666 INFO p.p.SportsApp [main] Started SportsApp in 25.582 seconds (JVM running for 32.877)
+2019-08-21 19:18:29,354 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 26481 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-08-21 19:18:29,392 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-08-21 19:18:29,393 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-08-21 19:21:57,890 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 26627 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-08-21 19:21:57,897 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-08-21 19:21:57,898 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-08-21 19:24:24,392 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 26751 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-08-21 19:24:24,405 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-08-21 19:24:24,406 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-08-21 19:26:38,427 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 26882 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-08-21 19:26:38,446 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-08-21 19:26:38,447 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-08-21 19:27:11,167 INFO p.p.SportsApp [main] Started SportsApp in 36.02 seconds (JVM running for 43.56)

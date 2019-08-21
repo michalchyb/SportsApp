@@ -7,7 +7,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import pl.project.models.Triathlon;
+import pl.project.models.dtos.TriathlonDTO;
 import pl.project.repositories.TriathlonRepository;
+import pl.project.services.TriathlonService;
 
 @CrossOrigin
 @RestController
@@ -15,9 +17,11 @@ import pl.project.repositories.TriathlonRepository;
 public class TriathlonController {
 
     private TriathlonRepository triathlonRepository;
+    private TriathlonService triathlonService;
 
-    public TriathlonController(TriathlonRepository triathlonRepository) {
+    public TriathlonController(TriathlonRepository triathlonRepository, TriathlonService triathlonService) {
         this.triathlonRepository = triathlonRepository;
+        this.triathlonService = triathlonService;
     }
 
     @GetMapping("triathlons")
@@ -40,4 +44,28 @@ public class TriathlonController {
         triathlonRepository.deleteById(triathlonId);
         return ResponseEntity.noContent().build();
     }
+
+    @PostMapping("dto/triathlons")
+    public Triathlon addTriathlon(@RequestBody TriathlonDTO triathlonDTO) {
+        return triathlonService.addTriathlon(triathlonDTO);
+    }
+
+    @PutMapping("dto/triathlons")
+    public void updateTriathlon(@RequestBody TriathlonDTO triathlonDTO) {
+        triathlonService.updateTriathlon(triathlonDTO);
+    }
+
+    @DeleteMapping("dto/triathlons{nameRun}")
+    public void deleteTriathlon(@PathVariable String nameRun) {
+        triathlonService.deleteTriathlon(nameRun);
+    }
+
+    @GetMapping("dto/triathlons")
+    public List<TriathlonDTO> getTriathlonsDTO(@RequestParam(value = "distance", required = false) Double distance) {
+        if (distance != null && distance > 0) {
+            return triathlonService.getTriathlonsByDistance(distance);
+        }
+        return triathlonService.getTriathlonsDTO();
+    }
+
 }

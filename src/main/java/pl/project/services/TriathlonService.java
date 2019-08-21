@@ -20,7 +20,7 @@ public class TriathlonService {
         this.triathlonMapper = triathlonMapper;
     }
 
-    public List<TriathlonDTO> getTriathlonDTO() {
+    public List<TriathlonDTO> getTriathlonsDTO() {
         return triathlonRepository.findAll()
                 .stream()
                 .map(triathlonMapper::map)
@@ -31,9 +31,30 @@ public class TriathlonService {
         return triathlonRepository.save(triathlonMapper.reverseMap(triathlonDTO));
     }
 
-    public void deleteRun(String runName) {
-        triathlonRepository.deleteByNameTriathlon(runName);
+    public void deleteTriathlon(String runName) {
+        triathlonRepository.deleteByNameRun(runName);
     }
 
-    //TODO add update triathlon
+    public void updateTriathlon(TriathlonDTO triathlonDTO) {
+        triathlonRepository.findRunByNameRun(triathlonDTO.getNameRun())
+                .ifPresent(r -> {
+                    triathlonDTO.setNameRun(triathlonDTO.getNameRun());
+                    triathlonDTO.setCity(triathlonDTO.getCity());
+                    triathlonDTO.setMyTime(triathlonDTO.getMyTime());
+                    triathlonDTO.setDate(triathlonDTO.getDate());
+                    triathlonDTO.setDistance(triathlonDTO.getDistance());
+                    triathlonDTO.setSwimTime(triathlonDTO.getSwimTime());
+                    triathlonDTO.setT1(triathlonDTO.getT1());
+                    triathlonDTO.setBikeTime(triathlonDTO.getBikeTime());
+                    triathlonDTO.setT2(triathlonDTO.getT2());
+                    triathlonDTO.setRunTime(triathlonDTO.getRunTime());
+                });
+    }
+
+    public List<TriathlonDTO> getTriathlonsByDistance(Double distance) {
+        return triathlonRepository.findTriathlonsByDistance(distance)
+                .stream()
+                .map(triathlonMapper::map)
+                .collect(Collectors.toList());
+    }
 }
