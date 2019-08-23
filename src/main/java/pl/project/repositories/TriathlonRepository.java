@@ -7,12 +7,12 @@ import java.util.List;
 import java.util.Optional;
 
 public interface TriathlonRepository extends JpaRepository<Triathlon, Long> {
-	Triathlon findById(long id);
+    Triathlon findById(long id);
 
-	Optional<Triathlon> findRunByNameRun(String runName);
+    Optional<Triathlon> findRunByNameRun(String runName);
 
-	List<Triathlon> findTriathlonsByDistance(Double distance);
+    List<Triathlon> findTriathlonsByDistance(Double distance);
 
-	void deleteByNameRun(String runName);
+    void deleteByNameRun(String runName);
 }
 

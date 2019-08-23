@@ -3401,3 +3401,8 @@ org.hibernate.InstantiationException: No default constructor for entity:  : pl.p
 2019-08-21 19:26:38,446 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
 2019-08-21 19:26:38,447 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
 2019-08-21 19:27:11,167 INFO p.p.SportsApp [main] Started SportsApp in 36.02 seconds (JVM running for 43.56)
+2019-08-23 16:22:46,846 DEBUG p.p.SportsApp [main] GeoIP Database loaded: GEO-533LITE 20180327 Build 1 Copyright (c) 2018 MaxMind Inc All Rights Reserved
+2019-08-23 16:22:49,429 INFO p.p.ProjectApplicationTests [main] Starting ProjectApplicationTests on michal-PC with PID 7209 (started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-08-23 16:22:49,431 DEBUG p.p.ProjectApplicationTests [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-08-23 16:22:49,432 INFO p.p.ProjectApplicationTests [main] No active profile set, falling back to default profiles: default
+2019-08-23 16:23:11,558 INFO p.p.ProjectApplicationTests [main] Started ProjectApplicationTests in 23.177 seconds (JVM running for 27.869)
