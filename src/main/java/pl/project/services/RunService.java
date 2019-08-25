@@ -64,6 +64,27 @@ public class RunService {
                 .map(runMapper::map)
                 .collect(Collectors.toList());
     }
+
+    public List<RunDTO> getLast5KmRuns() {
+        return runRepository.findLast5KmRuns()
+                .stream()
+                .map(runMapper::map)
+                .collect(Collectors.toList());
+    }
+
+    public List<RunDTO> getLast10KmRuns() {
+        return runRepository.findLast10KmRuns()
+                .stream()
+                .map(runMapper::map)
+                .collect(Collectors.toList());
+    }
+
+    public List<RunDTO> getLast21KmRuns() {
+        return runRepository.findLast21KmRuns()
+                .stream()
+                .map(runMapper::map)
+                .collect(Collectors.toList());
+    }
 }
 
 

@@ -1,6 +1,7 @@
 package pl.project.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import pl.project.models.Run;
 
 import java.util.List;
@@ -14,4 +15,17 @@ public interface RunRepository extends JpaRepository<Run, Long> {
     void deleteByNameRun(String runName);
 
     List<Run> findRunsByDistance(Double distance);
+
+    @Query(value = "SELECT *  from run r  WHERE r.distance = 5 limit 5",
+            nativeQuery = true)
+    List<Run> findLast5KmRuns();
+
+    @Query(value = "SELECT *  from run r  WHERE r.distance = 10 limit 5",
+            nativeQuery = true)
+    List<Run> findLast10KmRuns();
+
+    @Query(value = "SELECT *  from run r  WHERE r.distance = 21 limit 5",
+            nativeQuery = true)
+    List<Run> findLast21KmRuns();
+
 }
