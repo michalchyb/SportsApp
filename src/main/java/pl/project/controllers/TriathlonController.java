@@ -68,4 +68,18 @@ public class TriathlonController {
         return triathlonService.getTriathlonsDTO();
     }
 
+    @GetMapping("dto/triathlons/2825")
+    public List<TriathlonDTO> getLast2825KmRuns() {
+        return triathlonService.getLast2825KmTriathlons();
+    }
+
+    @GetMapping("dto/triathlons/5650")
+    public List<TriathlonDTO> getLast5650KmRuns() {
+        return triathlonService.getLast5650mTriathlons();
+    }
+
+    @GetMapping("dto/triathlons/11299")
+    public List<TriathlonDTO> getLast11299mRuns() {
+        return triathlonService.getLast11299mTriathlons();
+    }
 }

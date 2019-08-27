@@ -57,4 +57,25 @@ public class TriathlonService {
                 .map(triathlonMapper::map)
                 .collect(Collectors.toList());
     }
+
+    public List<TriathlonDTO> getLast2825KmTriathlons() {
+        return triathlonRepository.findLast2825KmRuns()
+                .stream()
+                .map(triathlonMapper::map)
+                .collect(Collectors.toList());
+    }
+
+    public List<TriathlonDTO> getLast5650mTriathlons() {
+        return triathlonRepository.findLast5650KmRuns()
+                .stream()
+                .map(triathlonMapper::map)
+                .collect(Collectors.toList());
+    }
+
+    public List<TriathlonDTO> getLast11299mTriathlons() {
+        return triathlonRepository.findLast11299KmRuns()
+                .stream()
+                .map(triathlonMapper::map)
+                .collect(Collectors.toList());
+    }
 }
