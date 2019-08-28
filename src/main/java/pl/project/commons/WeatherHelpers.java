@@ -4,7 +4,7 @@ import pl.project.models.weather.WeatherObject;
 
 public class WeatherHelpers {
 
-    public static final String PROPERTY = System.getProperty("line.separator");
+    private static final String PROPERTY = System.getProperty("line.separator");
 
     public static StringBuilder printWeatherForLocation(WeatherObject weatherObject) {
 

@@ -3,9 +3,9 @@ package pl.project.services;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import pl.project.mappers.RunMapper;
 import pl.project.models.Run;
 import pl.project.models.dtos.RunDTO;
-import pl.project.mappers.RunMapper;
 import pl.project.repositories.RunRepository;
 
 import java.util.List;

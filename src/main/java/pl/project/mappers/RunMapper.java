@@ -1,9 +1,9 @@
 package pl.project.mappers;
 
 import org.springframework.stereotype.Component;
+import pl.project.commons.mapper.Mapper;
 import pl.project.models.Run;
 import pl.project.models.dtos.RunDTO;
-import pl.project.commons.mapper.Mapper;
 
 @Component
 public class RunMapper implements Mapper<Run, RunDTO> {
