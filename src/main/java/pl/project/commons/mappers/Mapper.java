@@ -1,4 +1,4 @@
-package pl.project.commons.mapper;
+package pl.project.commons.mappers;
 
 public interface Mapper<F, T> {
 

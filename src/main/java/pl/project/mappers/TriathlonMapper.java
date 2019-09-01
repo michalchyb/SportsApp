@@ -1,7 +1,7 @@
 package pl.project.mappers;
 
 import org.springframework.stereotype.Component;
-import pl.project.commons.mapper.Mapper;
+import pl.project.commons.mappers.Mapper;
 import pl.project.models.Triathlon;
 import pl.project.models.dtos.TriathlonDTO;
 
