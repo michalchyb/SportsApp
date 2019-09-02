@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.*;
 import java.util.Date;
 
 
@@ -20,7 +19,6 @@ public class Run {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column(name = "name_run")
-    @Size(min=2, max=30)
     private String nameRun;
     @Column(name = "distance")
     private double distance;
