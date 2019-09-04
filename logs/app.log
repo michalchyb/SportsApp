@@ -4222,3 +4222,7 @@ javax.validation.UnexpectedTypeException: HV000030: No validator could be found 
 2019-09-02 19:03:00,995 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
 2019-09-02 19:03:00,996 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
 2019-09-02 19:03:30,135 INFO p.p.SportsApp [main] Started SportsApp in 32.445 seconds (JVM running for 39.15)
+2019-09-04 18:48:12,502 INFO p.p.SportsApp [main] Starting SportsApp on michal-PC with PID 5186 (/home/michalch/IdeaProjects/SportsApp/target/classes started by michalch in /home/michalch/IdeaProjects/SportsApp)
+2019-09-04 18:48:12,522 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-09-04 18:48:12,524 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
+2019-09-04 18:48:34,724 INFO p.p.SportsApp [main] Started SportsApp in 23.674 seconds (JVM running for 28.795)
