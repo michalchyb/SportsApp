@@ -3,11 +3,14 @@ package pl.project.controllers;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import pl.project.commons.extras.CreatorXLS;
 import pl.project.models.Run;
 import pl.project.models.dtos.RunDTO;
 import pl.project.repositories.RunRepository;
 import pl.project.services.RunService;
 
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 @CrossOrigin
@@ -80,5 +83,13 @@ public class RunController {
     @GetMapping("dto/runs/21km")
     public List<RunDTO> getLast21mRuns() {
         return runService.getLast21KmRuns();
+    }
+
+
+    @GetMapping("file")
+    public String createFile() throws NoSuchMethodException, IOException, IllegalAccessException, InvocationTargetException {
+        CreatorXLS<RunDTO> creatorXLS = new CreatorXLS<>(RunDTO.class);
+        creatorXLS.createFile(runService.getRunsDTO(), "src/main/", "runs");
+        return  "test";
     }
 }

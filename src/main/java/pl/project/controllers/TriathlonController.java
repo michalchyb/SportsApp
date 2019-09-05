@@ -1,15 +1,17 @@
 package pl.project.controllers;
 
-import java.util.List;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import pl.project.commons.extras.CreatorXLS;
 import pl.project.models.Triathlon;
 import pl.project.models.dtos.TriathlonDTO;
 import pl.project.repositories.TriathlonRepository;
 import pl.project.services.TriathlonService;
+
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.util.List;
 
 @CrossOrigin
 @RestController
@@ -81,5 +83,12 @@ public class TriathlonController {
     @GetMapping("dto/triathlons/11299")
     public List<TriathlonDTO> getLast11299mRuns() {
         return triathlonService.getLast11299mTriathlons();
+    }
+
+    @GetMapping("file")
+    public String createFile() throws NoSuchMethodException, IOException, IllegalAccessException, InvocationTargetException {
+        CreatorXLS<TriathlonDTO> creatorXLS = new CreatorXLS<>(TriathlonDTO.class);
+        creatorXLS.createFile(triathlonService.getTriathlonsDTO(), "src/main/", "triathlons");
+        return "test";
     }
 }

@@ -17,6 +17,7 @@ import java.util.List;
 
 public class CreatorXLS<T> {
     private Class clazz;
+    private static final String FILE_EXTENSION = ".xls";
 
     public CreatorXLS(Class clazz) {
         this.clazz = clazz;
@@ -55,7 +56,7 @@ public class CreatorXLS<T> {
             }
         }
 
-        String file = path + fileName + "_" + System.currentTimeMillis() + ".xls";
+        String file = path + fileName + "_" + System.currentTimeMillis() + FILE_EXTENSION;
         workbook.write(new File(file));
         workbook.close();
     }
