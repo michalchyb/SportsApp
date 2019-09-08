@@ -1,18 +1,23 @@
-package pl.project.models;
+package pl.project.models.securities;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Set;
 
-@AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
 @Table(name = "user")
 public class UserApp {
+
+    public UserApp(UserApp userApp) {
+        this.name = userApp.getName();
+        this.password = userApp.getPassword();
+        this.active = userApp.getActive();
+        this.roles = userApp.getRoles();
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
