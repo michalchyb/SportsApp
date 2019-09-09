@@ -1,4 +1,4 @@
-package pl.project.models.securities;
+package pl.project.commons.securities;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package pl.project.models.securities;
+package pl.project.commons.securities;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
