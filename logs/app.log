@@ -4226,3 +4226,12 @@ javax.validation.UnexpectedTypeException: HV000030: No validator could be found 
 2019-09-04 18:48:12,522 DEBUG p.p.SportsApp [main] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
 2019-09-04 18:48:12,524 INFO p.p.SportsApp [main] No active profile set, falling back to default profiles: default
 2019-09-04 18:48:34,724 INFO p.p.SportsApp [main] Started SportsApp in 23.674 seconds (JVM running for 28.795)
+2019-09-12 19:51:16,067 DEBUG p.p.SportsApp [main] GeoIP Database loaded: GEO-533LITE 20180327 Build 1 Copyright (c) 2018 MaxMind Inc All Rights Reserved
+2019-09-12 19:54:50,955 DEBUG p.p.SportsApp [main] GeoIP Database loaded: GEO-533LITE 20180327 Build 1 Copyright (c) 2018 MaxMind Inc All Rights Reserved
+2019-09-12 19:55:50,458 DEBUG p.p.SportsApp [main] GeoIP Database loaded: GEO-533LITE 20180327 Build 1 Copyright (c) 2018 MaxMind Inc All Rights Reserved
+2019-09-12 20:01:06,187 DEBUG p.p.SportsApp [main] GeoIP Database loaded: GEO-533LITE 20180327 Build 1 Copyright (c) 2018 MaxMind Inc All Rights Reserved
+2019-09-12 20:01:57,714 DEBUG p.p.SportsApp [main] GeoIP Database loaded: GEO-533LITE 20180327 Build 1 Copyright (c) 2018 MaxMind Inc All Rights Reserved
+2019-09-12 20:02:43,485 DEBUG p.p.SportsApp [main] GeoIP Database loaded: GEO-533LITE 20180327 Build 1 Copyright (c) 2018 MaxMind Inc All Rights Reserved
+2019-09-12 20:04:40,624 DEBUG p.p.SportsApp [main] GeoIP Database loaded: GEO-533LITE 20180327 Build 1 Copyright (c) 2018 MaxMind Inc All Rights Reserved
+2019-09-12 20:06:24,340 DEBUG p.p.SportsApp [main] GeoIP Database loaded: GEO-533LITE 20180327 Build 1 Copyright (c) 2018 MaxMind Inc All Rights Reserved
+2019-09-12 20:07:15,113 DEBUG p.p.SportsApp [main] GeoIP Database loaded: GEO-533LITE 20180327 Build 1 Copyright (c) 2018 MaxMind Inc All Rights Reserved
