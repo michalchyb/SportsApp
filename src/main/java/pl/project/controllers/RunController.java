@@ -2,13 +2,16 @@ package pl.project.controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import pl.project.commons.extras.CreatorXLS;
+import pl.project.commons.validators.RunValidator;
 import pl.project.models.Run;
 import pl.project.models.dtos.RunDTO;
 import pl.project.repositories.RunRepository;
 import pl.project.services.RunService;
 
+import javax.validation.Valid;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
@@ -31,8 +34,13 @@ public class RunController {
         return runService.getRuns();
     }
 
+    @InitBinder("runDto")
+    protected void initBinder(WebDataBinder binder) {
+        binder.addValidators(new RunValidator());
+    }
+
     @PostMapping("runs")
-    public ResponseEntity addRun(@RequestBody Run run) {
+    public ResponseEntity addRun(@RequestBody @Valid Run run) {
         return new ResponseEntity<>(runRepository.save(run), HttpStatus.OK);
     }
 
@@ -90,6 +98,6 @@ public class RunController {
     public String createFile() throws NoSuchMethodException, IOException, IllegalAccessException, InvocationTargetException {
         CreatorXLS<RunDTO> creatorXLS = new CreatorXLS<>(RunDTO.class);
         creatorXLS.createFile(runService.getRunsDTO(), "src/main/", "runs");
-        return  "test";
+        return "test";
     }
 }
