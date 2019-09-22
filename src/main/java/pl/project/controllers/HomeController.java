@@ -43,6 +43,5 @@ public class HomeController {
         WeatherObject weatherObject = objectMapper.readValue(weatherOutput, WeatherObject.class);
 
         return WeatherHelpers.printWeatherForLocation(weatherObject);
-
     }
 }

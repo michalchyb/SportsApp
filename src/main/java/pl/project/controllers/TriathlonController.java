@@ -85,7 +85,7 @@ public class TriathlonController {
         return triathlonService.getLast11299mTriathlons();
     }
 
-    @GetMapping("file")
+    @GetMapping("triathlons/file")
     public String createFile() throws NoSuchMethodException, IOException, IllegalAccessException, InvocationTargetException {
         CreatorXLS<TriathlonDTO> creatorXLS = new CreatorXLS<>(TriathlonDTO.class);
         creatorXLS.createFile(triathlonService.getTriathlonsDTO(), "src/main/", "triathlons");

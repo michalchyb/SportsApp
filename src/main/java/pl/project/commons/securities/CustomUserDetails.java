@@ -20,6 +20,7 @@ public class CustomUserDetails extends UserApp implements UserDetails {
                 .collect(Collectors.toList());
     }
 
+
     @Override
     public String getUsername() {
         return super.getName();

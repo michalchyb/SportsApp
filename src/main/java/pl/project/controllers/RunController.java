@@ -94,7 +94,7 @@ public class RunController {
     }
 
 
-    @GetMapping("file")
+    @GetMapping("runs/file")
     public String createFile() throws NoSuchMethodException, IOException, IllegalAccessException, InvocationTargetException {
         CreatorXLS<RunDTO> creatorXLS = new CreatorXLS<>(RunDTO.class);
         creatorXLS.createFile(runService.getRunsDTO(), "src/main/", "runs");
