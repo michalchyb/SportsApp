@@ -1,11 +1,15 @@
 package pl.project.commons.storage;
 
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.servlet.ServletContext;
+import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -85,5 +89,14 @@ public class LocalFileService {
         Files.copy(multipartFile.getInputStream(), path, StandardCopyOption.REPLACE_EXISTING);
     }
 
+    public void deleteFile(String fileName) {
+        File file = new File(uploads + fileName);
+        if (file.exists()) {
+            file.delete();
+        }
+    }
 
+    public File downloadFile(String fileName) {
+        return new File(uploads + fileName);
+    }
 }
