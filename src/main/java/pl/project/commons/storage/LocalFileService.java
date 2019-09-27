@@ -99,4 +99,8 @@ public class LocalFileService {
     public File downloadFile(String fileName) {
         return new File(uploads + fileName);
     }
+
+    public String getUploads(){
+        return uploads;
+    }
 }
