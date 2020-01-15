@@ -1,7 +1,5 @@
 package pl.project.commons.storage;
 
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -9,7 +7,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.servlet.ServletContext;
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -100,7 +97,7 @@ public class LocalFileService {
         return new File(uploads + fileName);
     }
 
-    public String getUploads(){
+    public String getUploads() {
         return uploads;
     }
 }
