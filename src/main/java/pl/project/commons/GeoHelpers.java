@@ -6,7 +6,7 @@ import java.net.URL;
 
 public class GeoHelpers {
     private static final String URL_NAME = "http://bot.whatismyipaddress.com";
-    private static final String ERROR_EXECUTION = "Cannot Execute";
+    private static final String CAN_NOT_EXECUTE = "Can't Execute";
 
     public static String getHostIpAddress() {
 
@@ -19,7 +19,7 @@ public class GeoHelpers {
                 hostIpAddress = sc.readLine().trim();
             }
         } catch (Exception e) {
-            hostIpAddress = ERROR_EXECUTION;
+            hostIpAddress = CAN_NOT_EXECUTE;
         }
         return hostIpAddress;
     }
