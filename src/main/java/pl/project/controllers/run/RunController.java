@@ -1,4 +1,4 @@
-package pl.project.controllers;
+package pl.project.controllers.run;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +24,7 @@ public class RunController {
     private RunRepository runRepository;
     private RunService runService;
 
-    public RunController(RunRepository runRepository, RunService runService) {
+    public RunController() {
         this.runRepository = runRepository;
         this.runService = runService;
     }
@@ -77,22 +77,6 @@ public class RunController {
         }
         return runService.getRunsDTO();
     }
-
-    @GetMapping("dto/runs/5km")
-    public List<RunDTO> getLast5KmRuns() {
-        return runService.getLast5KmRuns();
-    }
-
-    @GetMapping("dto/runs/10km")
-    public List<RunDTO> getLast10KmRuns() {
-        return runService.getLast10KmRuns();
-    }
-
-    @GetMapping("dto/runs/21km")
-    public List<RunDTO> getLast21mRuns() {
-        return runService.getLast21KmRuns();
-    }
-
 
     @GetMapping("runs/file")
     public String createFile() throws NoSuchMethodException, IOException, IllegalAccessException, InvocationTargetException {
