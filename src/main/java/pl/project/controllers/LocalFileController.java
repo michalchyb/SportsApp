@@ -12,7 +12,6 @@ import pl.project.commons.storage.LocalFileService;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.util.List;
 
@@ -49,8 +48,9 @@ public class LocalFileController {
                 .body(resource);
     }
 
-    @DeleteMapping("files/download")
+    @DeleteMapping("files/delete/{filename}")
     public void deleteFile(@PathVariable String filename) {
         localFileService.deleteFile(filename);
     }
+
 }

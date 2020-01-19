@@ -18,6 +18,5 @@ public class RunValidator implements Validator {
         } else if (runDTO.getNameRun().length() <= 3) {
             errors.reject("name", "name can not be that short, at least 3 characters");
         }
-
     }
 }
