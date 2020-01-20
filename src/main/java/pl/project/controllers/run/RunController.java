@@ -24,7 +24,7 @@ public class RunController {
     private RunRepository runRepository;
     private RunService runService;
 
-    public RunController() {
+    public RunController(RunRepository runRepository, RunService runService) {
         this.runRepository = runRepository;
         this.runService = runService;
     }
@@ -45,7 +45,7 @@ public class RunController {
     }
 
     @PostMapping("dto/runs")
-    public Run addRun(@RequestBody RunDTO runDTO) {
+    public Run addRun(@RequestBody @Valid RunDTO runDTO) {
         return runService.addRun(runDTO);
     }
 
