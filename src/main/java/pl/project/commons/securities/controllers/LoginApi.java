@@ -8,8 +8,8 @@ import pl.project.commons.securities.models.User;
 @RestController
 public class LoginApi {
 
-    @PostMapping("/login")
+    @PostMapping("/api/login")
     public String login(@RequestBody User user) {
-        return "";
+        return "test";
     }
 }
