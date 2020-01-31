@@ -16,7 +16,7 @@ public class LoginApi {
     public String login(@RequestBody User user) {
 
         long currentTime = System.currentTimeMillis();
-
+        //todo check in database for user and if exist retur token
         return Jwts.builder()
                 .setSubject(user.getLogin())
                 .claim("roles", "user")

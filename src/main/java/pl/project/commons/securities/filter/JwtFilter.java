@@ -19,9 +19,15 @@ public class JwtFilter implements javax.servlet.Filter {
         if (httpServletRequest == null || !((HttpServletRequest) servletRequest).getHeader("Authorization").startsWith("Bearer_")) {
             throw new ServletException("Wrong or empty header");
         } else {
-            String token = ((HttpServletRequest) servletRequest).getHeader("Authorization").substring(7);
-            Claims claims = Jwts.parser().setSigningKey("michal123").parseClaimsJws(token).getBody();
+            try {
+                String token = ((HttpServletRequest) servletRequest).getHeader("Authorization").substring(7);
+                Claims claims = Jwts.parser().setSigningKey("michal123").parseClaimsJws(token).getBody();
+                servletRequest.setAttribute("claims", claims);
+            }
+            catch (Exception ex){
+                throw new ServletException("Incorrect key");
+            }
         }
-
+        filterChain.doFilter(servletRequest,servletResponse);
     }
 }
