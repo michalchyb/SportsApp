@@ -1,4 +1,4 @@
-package pl.project.commons.securities.filter;
+package pl.project.securities.filter;
 
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;

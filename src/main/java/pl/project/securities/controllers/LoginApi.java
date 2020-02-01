@@ -1,11 +1,11 @@
-package pl.project.commons.securities.controllers;
+package pl.project.securities.controllers;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import pl.project.commons.securities.models.User;
+import pl.project.securities.models.User;
 
 import java.util.Date;
 

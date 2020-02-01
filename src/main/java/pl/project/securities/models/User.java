@@ -1,4 +1,4 @@
-package pl.project.commons.securities.models;
+package pl.project.securities.models;
 
 public class User {
 

@@ -1,4 +1,4 @@
-package pl.project.commons.securities.filter;
+package pl.project.securities.filter;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
