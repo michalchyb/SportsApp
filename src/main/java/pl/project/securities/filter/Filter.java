@@ -10,7 +10,7 @@ public class Filter {
     public FilterRegistrationBean filterRegistrationBean() {
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
 
-        filterRegistrationBean.setFilter(new JwtFilter());
+        filterRegistrationBean.setFilter(new JwtFilterExample());
         filterRegistrationBean.setUrlPatterns(Collections.singleton("/api/login/*"));
         return filterRegistrationBean;
     }

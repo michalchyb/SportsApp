@@ -1,33 +1,35 @@
 package pl.project.securities.filter;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class JwtFilter implements javax.servlet.Filter {
-    @Override
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
+public class JwtFilter extends BasicAuthenticationFilter {
 
-        ((HttpServletRequest) servletRequest).getHeader("Authorization");
-        if (httpServletRequest == null || !((HttpServletRequest) servletRequest).getHeader("Authorization").startsWith("Bearer_")) {
-            throw new ServletException("Wrong or empty header");
-        } else {
-            try {
-                String token = ((HttpServletRequest) servletRequest).getHeader("Authorization").substring(7);
-                Claims claims = Jwts.parser().setSigningKey("michal123").parseClaimsJws(token).getBody();
-                servletRequest.setAttribute("claims", claims);
-            }
-            catch (Exception ex){
-                throw new ServletException("Incorrect key");
-            }
-        }
-        filterChain.doFilter(servletRequest,servletResponse);
+    public JwtFilter(AuthenticationManager authenticationManager) {
+        super(authenticationManager);
+    }
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
+
+        String header = request.getHeader("Authorization");
+        UsernamePasswordAuthenticationFilter authResult = getAuthenticationByTokecn(header);
+
+    }
+
+    private UsernamePasswordAuthenticationFilter getAuthenticationByTokecn(String header) {
+
+        Jws<Claims> claimsJws =  Jwts.parser().setSigningKey(key)
+                .parseClaimsJws(jwt);
     }
 }
