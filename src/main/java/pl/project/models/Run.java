@@ -1,20 +1,19 @@
 package pl.project.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
 
 
 @Entity
+@Builder
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class Run {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -26,8 +25,7 @@ public class Run {
     private Date date;
     @Column(name = "my_time")
     private String myTime;
-    @Column(name = "city")
-    private String city;
-
-
+    @ManyToOne
+    @JoinColumn(name = "city_id", nullable = false)
+    private City city;
 }
