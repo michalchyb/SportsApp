@@ -16,5 +16,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/test3").hasRole("ADMIN")
                 .and()
                 .addFilter(new JwtFilter(authenticationManager()));
+        http.csrf().disable();
     }
 }
