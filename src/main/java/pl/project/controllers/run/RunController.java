@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.project.models.Run;
+import pl.project.models.dtos.RunDTO;
 import pl.project.repositories.RunRepository;
 import pl.project.services.RunService;
 
@@ -32,4 +33,10 @@ public class RunController {
         return runService.getRuns();
     }
 
+    @GetMapping(value = "dto/runs",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<RunDTO> getRunsDTO() {
+        return runService.getRunsDTO();
+    }
 }

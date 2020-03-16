@@ -28,7 +28,6 @@ public class RunService {
     }
 
     public List<RunDTO> getRunsDTO() {
-
         return runRepository
                 .findAll()
                 .stream()
