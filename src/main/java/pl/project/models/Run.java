@@ -12,11 +12,12 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "runs")
 public class Run {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     @Column(name = "name_run")
     private String nameRun;
     @Column(name = "distance")
@@ -25,7 +26,6 @@ public class Run {
     private Date date;
     @Column(name = "my_time")
     private String myTime;
-    @ManyToOne
-    @JoinColumn(name = "city_id", nullable = false)
-    private City city;
+    @Column(name = "city")
+    private String city;
 }
