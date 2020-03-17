@@ -1,8 +1,8 @@
 package pl.project.geoip;
 
 import org.junit.Test;
-import pl.project.commons.GeoHelpers;
-import pl.project.commons.geoip.GeoIPv4;
+import pl.project.common.GeoHelpers;
+import pl.project.common.geoip.GeoIPv4;
 
 import static org.junit.Assert.*;
 
