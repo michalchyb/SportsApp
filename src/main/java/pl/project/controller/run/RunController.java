@@ -2,13 +2,9 @@ package pl.project.controller.run;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.project.model.Run;
 import pl.project.model.dto.RunDTO;
-import pl.project.repository.RunRepository;
 import pl.project.service.RunService;
 
 import java.util.List;
@@ -18,11 +14,9 @@ import java.util.List;
 @RequestMapping("/api/")
 public class RunController {
 
-    private RunRepository runRepository;
     private RunService runService;
 
-    public RunController(RunRepository runRepository, RunService runService) {
-        this.runRepository = runRepository;
+    public RunController(RunService runService) {
         this.runService = runService;
     }
 
@@ -38,5 +32,12 @@ public class RunController {
             produces = MediaType.APPLICATION_JSON_VALUE)
     public List<RunDTO> getRunsDTO() {
         return runService.getRunsDTO();
+    }
+
+    @GetMapping(value = "dto/run/{id}",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public RunDTO getRun(@PathVariable Long id) {
+        return runService.getRunDTO(id);
     }
 }

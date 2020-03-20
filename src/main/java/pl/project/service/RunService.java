@@ -35,6 +35,12 @@ public class RunService {
                 .collect(Collectors.toList());
     }
 
+
+    public RunDTO getRunDTO(Long id) {
+        return runRepository.findById(id)
+                .orElseThrow(() -> new RunNotFoundException(id));
+    }
+
     public Run addRun(RunDTO runDTO) {
         return runRepository.save(runMapper.reverseMap(runDTO));
     }
