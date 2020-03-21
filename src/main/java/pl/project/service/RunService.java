@@ -3,6 +3,7 @@ package pl.project.service;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import pl.project.exception.run.RunNotFoundException;
 import pl.project.mapper.RunMapper;
 import pl.project.model.Run;
 import pl.project.model.dto.RunDTO;
@@ -36,7 +37,7 @@ public class RunService {
     }
 
 
-    public RunDTO getRunDTO(Long id) {
+    public Run getRun(Long id) {
         return runRepository.findById(id)
                 .orElseThrow(() -> new RunNotFoundException(id));
     }

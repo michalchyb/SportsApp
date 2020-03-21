@@ -37,7 +37,7 @@ public class RunController {
     @GetMapping(value = "dto/run/{id}",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public RunDTO getRun(@PathVariable Long id) {
-        return runService.getRunDTO(id);
+    public Run getRun(@PathVariable Long id) {
+        return runService.getRun(id);
     }
 }
