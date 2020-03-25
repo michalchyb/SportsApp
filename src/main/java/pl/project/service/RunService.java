@@ -71,8 +71,7 @@ public class RunService {
                 .collect(Collectors.toList());
     }
 
-    public List<RunDTO> getLast5KmRuns() {
-        return runRepository.findLast5KmRuns()
+    public List<RunDTO> getLast5KmRuns() { return runRepository.findLast5KmRuns()
                 .stream()
                 .map(runMapper::map)
                 .collect(Collectors.toList());

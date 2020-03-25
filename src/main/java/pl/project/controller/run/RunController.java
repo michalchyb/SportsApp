@@ -40,4 +40,23 @@ public class RunController {
     public Run getRun(@PathVariable Long id) {
         return runService.getRun(id);
     }
+
+    @PostMapping(value = "dto/runs",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public Run addRun(@RequestBody RunDTO runDTO) {
+        return runService.addRun(runDTO);
+    }
+    @PutMapping(value = "dto/runs",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public void updateRun(@RequestBody RunDTO runDTO) {
+        runService.updateRun(runDTO);
+    }
+    @DeleteMapping(value = "dto/runs{nameRun}",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public void deleteRun(@PathVariable String nameRun) {
+        runService.deleteRun(nameRun);
+    }
 }
