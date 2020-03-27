@@ -11,11 +11,9 @@ import pl.project.service.TriathlonService;
 @RequestMapping("/api/")
 public class TriathlonController {
 
-    private TriathlonRepository triathlonRepository;
     private TriathlonService triathlonService;
 
-    public TriathlonController(TriathlonRepository triathlonRepository, TriathlonService triathlonService) {
-        this.triathlonRepository = triathlonRepository;
+    public TriathlonController(TriathlonService triathlonService) {
         this.triathlonService = triathlonService;
     }
 }
