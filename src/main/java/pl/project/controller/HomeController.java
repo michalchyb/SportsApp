@@ -33,7 +33,7 @@ public class HomeController {
     }
 
     @GetMapping("weather")
-    public StringBuilder getWeatherForLocalization() throws IOException {
+    public StringBuilder getWeatherForFoundLocalization() throws IOException {
 
         ObjectMapper objectMapper = new ObjectMapper();
         String weatherOutput = weatherService.getWeatherFromApi();
