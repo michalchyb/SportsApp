@@ -10,7 +10,6 @@ import pl.project.common.WeatherHelpers;
 import pl.project.model.geo.GeoLocalization;
 import pl.project.model.weather.WeatherObject;
 import pl.project.service.GeoLocalizationService;
-import pl.project.service.RunService;
 import pl.project.service.WeatherService;
 
 import java.io.IOException;
@@ -22,12 +21,10 @@ public class HomeController {
 
     private GeoLocalizationService geoLocalization;
     private WeatherService weatherService;
-    private RunService runService;
 
-    public HomeController(GeoLocalizationService geoLocalization, WeatherService weatherService, RunService runService) {
+    public HomeController(GeoLocalizationService geoLocalization, WeatherService weatherService) {
         this.geoLocalization = geoLocalization;
         this.weatherService = weatherService;
-        this.runService = runService;
     }
 
     @GetMapping("location")
