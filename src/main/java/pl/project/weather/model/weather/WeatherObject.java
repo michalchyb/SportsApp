@@ -2,6 +2,7 @@
 package pl.project.weather.model.weather;
 
 import com.fasterxml.jackson.annotation.*;
+import lombok.Builder;
 
 import javax.validation.Valid;
 import java.util.HashMap;
@@ -24,6 +25,7 @@ import java.util.Map;
         "name",
         "cod"
 })
+@Builder
 public class WeatherObject {
 
     @JsonProperty("coord")
@@ -62,26 +64,6 @@ public class WeatherObject {
     @JsonIgnore
     @Valid
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-
-    public WeatherObject() {
-    }
-
-    public WeatherObject(Coord coord, List<Weather> weather, String base, Main main, Wind wind, Rain rain, Clouds clouds, Integer dt, Sys sys, Integer timezone, Integer id, String name, Integer cod) {
-        super();
-        this.coord = coord;
-        this.weather = weather;
-        this.base = base;
-        this.main = main;
-        this.wind = wind;
-        this.rain = rain;
-        this.clouds = clouds;
-        this.dt = dt;
-        this.sys = sys;
-        this.timezone = timezone;
-        this.id = id;
-        this.name = name;
-        this.cod = cod;
-    }
 
     @JsonProperty("coord")
     public Coord getCoord() {

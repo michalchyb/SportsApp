@@ -2,6 +2,7 @@
 package pl.project.weather.model.weather;
 
 import com.fasterxml.jackson.annotation.*;
+import lombok.Builder;
 
 import javax.validation.Valid;
 import java.util.HashMap;
@@ -9,14 +10,15 @@ import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "temp",
-    "pressure",
-    "humidity",
-    "temp_min",
-    "temp_max",
-    "sea_level",
-    "grnd_level"
+        "temp",
+        "pressure",
+        "humidity",
+        "temp_min",
+        "temp_max",
+        "sea_level",
+        "grnd_level"
 })
+@Builder
 public class Main {
 
     @JsonProperty("temp")
@@ -36,20 +38,6 @@ public class Main {
     @JsonIgnore
     @Valid
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-
-    public Main() {
-    }
-
-    public Main(Double temp, Double pressure, Integer humidity, Double tempMin, Double tempMax, Double seaLevel, Double grndLevel) {
-        super();
-        this.temp = temp;
-        this.pressure = pressure;
-        this.humidity = humidity;
-        this.tempMin = tempMin;
-        this.tempMax = tempMax;
-        this.seaLevel = seaLevel;
-        this.grndLevel = grndLevel;
-    }
 
     @JsonProperty("temp")
     public Double getTemp() {
