@@ -3,7 +3,7 @@ package pl.project.service;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import pl.project.exception.run.RunNotFoundException;
+import pl.project.exception.RunNotFoundException;
 import pl.project.mapper.RunMapper;
 import pl.project.model.Run;
 import pl.project.model.dto.RunDTO;
@@ -71,7 +71,8 @@ public class RunService {
                 .collect(Collectors.toList());
     }
 
-    public List<RunDTO> getLast5KmRuns() { return runRepository.findLast5KmRuns()
+    public List<RunDTO> getLast5KmRuns() {
+        return runRepository.findLast5KmRuns()
                 .stream()
                 .map(runMapper::map)
                 .collect(Collectors.toList());
