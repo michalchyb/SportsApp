@@ -6,10 +6,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class OpenWeatherApi {
 
-    @Value("{open.weather.api.url}")
+    @Value("${open.weather.api.url}")
     private String url;
 
-    @Value("{open.weather.api.key}")
+    @Value("${open.weather.api.key}")
     private String apiKey;
 
     @Value("${open.weather.api.unit}")
