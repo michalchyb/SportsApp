@@ -1,5 +1,5 @@
 
-package pl.project.model.weather;
+package pl.project.weather.model.weather;
 
 import com.fasterxml.jackson.annotation.*;
 
@@ -9,38 +9,46 @@ import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "all"
+        "lon",
+        "lat"
 })
-public class Clouds {
+public class Coord {
 
-    @JsonProperty("all")
-    private Integer all;
+    @JsonProperty("lon")
+    private Double lon;
+    @JsonProperty("lat")
+    private Double lat;
     @JsonIgnore
     @Valid
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    /**
-     * No args constructor for use in serialization
-     */
-    public Clouds() {
+    public Coord() {
     }
 
-    /**
-     * @param all
-     */
-    public Clouds(Integer all) {
+    public Coord(Double lon, Double lat) {
         super();
-        this.all = all;
+        this.lon = lon;
+        this.lat = lat;
     }
 
-    @JsonProperty("all")
-    public Integer getAll() {
-        return all;
+    @JsonProperty("lon")
+    public Double getLon() {
+        return lon;
     }
 
-    @JsonProperty("all")
-    public void setAll(Integer all) {
-        this.all = all;
+    @JsonProperty("lon")
+    public void setLon(Double lon) {
+        this.lon = lon;
+    }
+
+    @JsonProperty("lat")
+    public Double getLat() {
+        return lat;
+    }
+
+    @JsonProperty("lat")
+    public void setLat(Double lat) {
+        this.lat = lat;
     }
 
     @JsonAnyGetter
@@ -55,8 +63,9 @@ public class Clouds {
 
     @Override
     public String toString() {
-        return "Clouds{" +
-                "all=" + all +
+        return "Coord{" +
+                "lon=" + lon +
+                ", lat=" + lat +
                 ", additionalProperties=" + additionalProperties +
                 '}';
     }

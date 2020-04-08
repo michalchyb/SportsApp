@@ -1,4 +1,4 @@
-package pl.project.exception.run;
+package pl.project.exception;
 
 public class RunNotFoundException extends RuntimeException {
     public RunNotFoundException(Long id) {

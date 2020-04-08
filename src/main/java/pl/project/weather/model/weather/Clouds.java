@@ -1,5 +1,5 @@
 
-package pl.project.model.weather;
+package pl.project.weather.model.weather;
 
 import com.fasterxml.jackson.annotation.*;
 
@@ -9,38 +9,32 @@ import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "3h"
+        "all"
 })
-public class Rain {
+public class Clouds {
 
-    @JsonProperty("3h")
-    private Double _3h;
+    @JsonProperty("all")
+    private Integer all;
     @JsonIgnore
     @Valid
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    /**
-     * No args constructor for use in serialization
-     */
-    public Rain() {
+    public Clouds() {
     }
 
-    /**
-     * @param _3h
-     */
-    public Rain(Double _3h) {
+    public Clouds(Integer all) {
         super();
-        this._3h = _3h;
+        this.all = all;
     }
 
-    @JsonProperty("3h")
-    public Double get3h() {
-        return _3h;
+    @JsonProperty("all")
+    public Integer getAll() {
+        return all;
     }
 
-    @JsonProperty("3h")
-    public void set3h(Double _3h) {
-        this._3h = _3h;
+    @JsonProperty("all")
+    public void setAll(Integer all) {
+        this.all = all;
     }
 
     @JsonAnyGetter
@@ -55,8 +49,8 @@ public class Rain {
 
     @Override
     public String toString() {
-        return "Rain{" +
-                "_3h=" + _3h +
+        return "Clouds{" +
+                "all=" + all +
                 ", additionalProperties=" + additionalProperties +
                 '}';
     }

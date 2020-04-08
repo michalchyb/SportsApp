@@ -1,5 +1,5 @@
 
-package pl.project.model.weather;
+package pl.project.weather.model.weather;
 
 import com.fasterxml.jackson.annotation.*;
 
@@ -22,16 +22,9 @@ public class Wind {
     @Valid
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    /**
-     * No args constructor for use in serialization
-     */
     public Wind() {
     }
 
-    /**
-     * @param speed
-     * @param deg
-     */
     public Wind(Double speed, Double deg) {
         super();
         this.speed = speed;

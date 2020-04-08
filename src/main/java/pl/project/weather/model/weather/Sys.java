@@ -1,5 +1,5 @@
 
-package pl.project.model.weather;
+package pl.project.weather.model.weather;
 
 import com.fasterxml.jackson.annotation.*;
 
@@ -28,18 +28,9 @@ public class Sys {
     @Valid
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    /**
-     * No args constructor for use in serialization
-     */
     public Sys() {
     }
 
-    /**
-     * @param message
-     * @param sunset
-     * @param sunrise
-     * @param country
-     */
     public Sys(Double message, String country, Integer sunrise, Integer sunset) {
         super();
         this.message = message;
