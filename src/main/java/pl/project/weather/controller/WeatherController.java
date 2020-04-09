@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import pl.project.weather.model.dto.WeatherDto;
 import pl.project.weather.service.WeatherService;
 
-@CrossOrigin
+@CrossOrigin()
 @RestController
 @RequestMapping("/api/")
 public class WeatherController {

@@ -18,5 +18,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .addFilter(new JwtFilter(authenticationManager()));
         http.csrf().disable();
+        http.cors();
     }
 }
