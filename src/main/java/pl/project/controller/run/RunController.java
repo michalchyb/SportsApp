@@ -1,7 +1,6 @@
 package pl.project.controller.run;
 
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.project.model.Run;
 import pl.project.model.dto.RunDTO;
@@ -23,7 +22,7 @@ public class RunController {
     @GetMapping(value = "runs",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Run>> getRuns() {
+    public List<Run> getRuns() {
         return runService.getRuns();
     }
 
@@ -34,7 +33,7 @@ public class RunController {
         return runService.getRunsDTO();
     }
 
-    @GetMapping(value = "dto/run/{id}",
+    @GetMapping(value = "/run/{id}",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public Run getRun(@PathVariable Long id) {
@@ -47,12 +46,14 @@ public class RunController {
     public Run addRun(@RequestBody RunDTO runDTO) {
         return runService.addRun(runDTO);
     }
+
     @PutMapping(value = "dto/runs",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public void updateRun(@RequestBody RunDTO runDTO) {
         runService.updateRun(runDTO);
     }
+
     @DeleteMapping(value = "dto/runs{nameRun}",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)

@@ -15,4 +15,11 @@ public class RunNotFoundAdvice {
     public String runNotFoundController(RunNotFoundException ex) {
         return ex.getMessage();
     }
+
+    @ResponseBody
+    @ExceptionHandler(RunsNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public String runsNotFoundController(RunsNotFoundException ex ){
+        return ex.getMessage();
+    }
 }

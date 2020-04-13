@@ -1,9 +1,8 @@
 package pl.project.service;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import pl.project.exception.RunNotFoundException;
+import pl.project.exception.RunsNotFoundException;
 import pl.project.mapper.RunMapper;
 import pl.project.model.Run;
 import pl.project.model.dto.RunDTO;
@@ -24,8 +23,11 @@ public class RunService {
         this.runMapper = runMapper;
     }
 
-    public ResponseEntity<List<Run>> getRuns() {
-        return new ResponseEntity<>(runRepository.findAll(), HttpStatus.OK);
+    public List<Run> getRuns() {
+        if (runRepository.findAll().isEmpty()) {
+            throw new RunsNotFoundException();
+        }
+        return runRepository.findAll();
     }
 
     public List<RunDTO> getRunsDTO() {
@@ -35,7 +37,6 @@ public class RunService {
                 .map(runMapper::map)
                 .collect(Collectors.toList());
     }
-
 
     public Run getRun(Long id) {
         return runRepository.findById(id)
