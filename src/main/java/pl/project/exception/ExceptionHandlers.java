@@ -29,8 +29,8 @@ public class ExceptionHandlers extends BaseExceptionHandler {
     @ResponseBody
     @ExceptionHandler(RunsNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public String runsNotFoundController(RunsNotFoundException ex) {
-        return ex.getMessage();
+    public ErrorResponse handleRunsNotFoundController(final RunsNotFoundException ex) {
+        log.error("Runs not found thrown", ex);
+        return new ErrorResponse(LocalDateTime.now(), "RUNS_NOT_FOUND", ex.getMessage(), HttpStatus.NOT_FOUND.value());
     }
-
 }

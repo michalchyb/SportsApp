@@ -9,7 +9,7 @@ import java.util.Optional;
 
 public interface RunRepository extends JpaRepository<Run, Long> {
 
-    Run findById(long id);
+//    Run findById(long id);
 
     Optional<Run> findRunByNameRun(String runName);
 

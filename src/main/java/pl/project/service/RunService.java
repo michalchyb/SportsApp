@@ -24,10 +24,11 @@ public class RunService {
     }
 
     public List<Run> getRuns() {
-        if (runRepository.findAll().isEmpty()) {
+        List<Run> runs = runRepository.findAll();
+        if (runs.isEmpty()) {
             throw new RunsNotFoundException();
         }
-        return runRepository.findAll();
+        return runs;
     }
 
     public List<RunDTO> getRunsDTO() {
@@ -38,7 +39,7 @@ public class RunService {
                 .collect(Collectors.toList());
     }
 
-    public Run getRun(Long id) {
+    public Run getRunById(Long id) {
         return runRepository.findById(id)
                 .orElseThrow(() -> new RunNotFoundException(id));
     }
@@ -93,5 +94,3 @@ public class RunService {
                 .collect(Collectors.toList());
     }
 }
-
-
