@@ -32,11 +32,16 @@ public class RunService {
     }
 
     public List<RunDTO> getRunsDTO() {
-        return runRepository
+        List<RunDTO> runsDto = runRepository
                 .findAll()
                 .stream()
                 .map(runMapper::map)
                 .collect(Collectors.toList());
+
+        if (runsDto.isEmpty()) {
+            throw new RunsNotFoundException();
+        }
+        return runsDto;
     }
 
     public Run getRunById(Long id) {

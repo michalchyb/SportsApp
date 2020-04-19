@@ -58,7 +58,6 @@ public class RunServiceTest {
 
     }
 
-
     private List<Run> prepareRunList() {
         List<Run> runList = new ArrayList<>();
         Run run1 = prepareRun(1L, "Biegnij Warszawo", 5.0, new Date(2020, Calendar.APRIL, 21), "27:400", "Warszawa");
