@@ -11,9 +11,9 @@ public interface RunRepository extends JpaRepository<Run, Long> {
 
 //    Run findById(long id);
 
-    Optional<Run> findRunByNameRun(String runName);
+    Optional<Run> findRunByName(String name);
 
-    void deleteByNameRun(String runName);
+    void deleteByName(String run);
 
     List<Run> findRunsByDistance(Double distance);
 

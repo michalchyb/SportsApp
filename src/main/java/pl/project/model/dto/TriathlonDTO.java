@@ -14,7 +14,7 @@ public class TriathlonDTO {
     private String nameRun;
     private double distance = 0.0;
     private Date date;
-    private String myTime;
+    private String time;
     private String city;
     private String swimTime;
     private String t1;

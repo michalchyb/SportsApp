@@ -54,7 +54,7 @@ public class RunService {
     }
 
     public void updateRun(RunDTO runDTO) {
-        runRepository.findRunByNameRun(runDTO.getName())
+        runRepository.findRunByName(runDTO.getName())
                 .ifPresent(r -> {
                     runDTO.setName(runDTO.getName());
                     runDTO.setCity(runDTO.getCity());
@@ -67,8 +67,8 @@ public class RunService {
 
     }
 
-    public void deleteRun(String runName) {
-        runRepository.deleteByNameRun(runName);
+    public void deleteRun(String run) {
+        runRepository.deleteByName(run);
     }
 
     public List<RunDTO> getRunsByDistance(Double distance) {

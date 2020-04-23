@@ -28,9 +28,9 @@ public class Triathlon {
     @Column(name = "date")
     @NotEmpty
     private Date date;
-    @Column(name = "my_time")
+    @Column(name = "time")
     @NotEmpty
-    private String myTime;
+    private String time;
     @Column(name = "city")
     @NotEmpty
     private String city;

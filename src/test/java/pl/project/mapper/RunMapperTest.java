@@ -40,13 +40,13 @@ public class RunMapperTest {
     public void reverseMap() {
     }
 
-    private Run prepareRun(Long id, String name, double distance, Date date, String myTime, String city) {
+    private Run prepareRun(Long id, String name, double distance, Date date, String time, String city) {
         return Run.builder()
                 .id(id)
                 .name(name)
                 .distance(distance)
                 .date(date)
-                .time(myTime)
+                .time(time)
                 .city(city)
                 .build();
     }

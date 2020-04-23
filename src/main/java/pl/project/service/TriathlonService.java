@@ -31,8 +31,8 @@ public class TriathlonService {
         return triathlonRepository.save(triathlonMapper.reverseMap(triathlonDTO));
     }
 
-    public void deleteTriathlon(String runName) {
-        triathlonRepository.deleteByNameRun(runName);
+    public void deleteTriathlon(String run) {
+        triathlonRepository.deleteByNameRun(run);
     }
 
     public void updateTriathlon(TriathlonDTO triathlonDTO) {
@@ -40,7 +40,7 @@ public class TriathlonService {
                 .ifPresent(r -> {
                     triathlonDTO.setNameRun(triathlonDTO.getNameRun());
                     triathlonDTO.setCity(triathlonDTO.getCity());
-                    triathlonDTO.setMyTime(triathlonDTO.getMyTime());
+                    triathlonDTO.setTime(triathlonDTO.getTime());
                     triathlonDTO.setDate(triathlonDTO.getDate());
                     triathlonDTO.setDistance(triathlonDTO.getDistance());
                     triathlonDTO.setSwimTime(triathlonDTO.getSwimTime());

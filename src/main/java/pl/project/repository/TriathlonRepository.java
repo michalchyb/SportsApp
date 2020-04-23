@@ -10,11 +10,11 @@ import java.util.Optional;
 public interface TriathlonRepository extends JpaRepository<Triathlon, Long> {
     Triathlon findById(long id);
 
-    Optional<Triathlon> findRunByNameRun(String runName);
+    Optional<Triathlon> findRunByNameRun(String run);
 
     List<Triathlon> findTriathlonsByDistance(Double distance);
 
-    void deleteByNameRun(String runName);
+    void deleteByNameRun(String run);
 
     @Query(value = "SELECT *  from run t  WHERE t.distance = 28.25 limit 5",
             nativeQuery = true)
