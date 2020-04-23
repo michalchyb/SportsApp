@@ -32,7 +32,7 @@ public class RunServiceTest {
         Run run = runService.getRunById(1L);
 
         assertEquals("Warszawa", run.getCity());
-        assertEquals("54:90", run.getMyTime());
+        assertEquals("54:90", run.getTime());
         assertEquals(5.0, run.getDistance(), 0);
     }
 
@@ -70,10 +70,10 @@ public class RunServiceTest {
     private Run prepareRun(Long id, String name, double distance, Date date, String myTime, String city) {
         return Run.builder()
                 .id(id)
-                .nameRun(name)
+                .name(name)
                 .distance(distance)
                 .date(date)
-                .myTime(myTime)
+                .time(myTime)
                 .city(city)
                 .build();
     }

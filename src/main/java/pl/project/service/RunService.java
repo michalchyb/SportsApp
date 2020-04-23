@@ -54,11 +54,11 @@ public class RunService {
     }
 
     public void updateRun(RunDTO runDTO) {
-        runRepository.findRunByNameRun(runDTO.getNameRun())
+        runRepository.findRunByNameRun(runDTO.getName())
                 .ifPresent(r -> {
-                    runDTO.setNameRun(runDTO.getNameRun());
+                    runDTO.setName(runDTO.getName());
                     runDTO.setCity(runDTO.getCity());
-                    runDTO.setMyTime(runDTO.getMyTime());
+                    runDTO.setTime(runDTO.getTime());
                     runDTO.setDate(runDTO.getDate());
                     runDTO.setDistance(runDTO.getDistance());
 

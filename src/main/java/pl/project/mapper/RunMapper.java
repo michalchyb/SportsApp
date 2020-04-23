@@ -11,10 +11,10 @@ public class RunMapper implements Mapper<Run, RunDTO> {
     public RunDTO map(Run from) {
         return RunDTO
                 .builder()
-                .nameRun(from.getNameRun())
+                .name(from.getName())
                 .distance(from.getDistance())
                 .date(from.getDate())
-                .myTime(from.getMyTime())
+                .time(from.getTime())
                 .city(from.getCity())
                 .build();
     }
@@ -23,10 +23,10 @@ public class RunMapper implements Mapper<Run, RunDTO> {
     public Run reverseMap(RunDTO to) {
         return Run
                 .builder()
-                .nameRun(to.getNameRun())
+                .name(to.getName())
                 .distance(to.getDistance())
                 .date(to.getDate())
-                .myTime(to.getMyTime())
+                .time(to.getTime())
                 .city(to.getCity())
                 .build();
     }

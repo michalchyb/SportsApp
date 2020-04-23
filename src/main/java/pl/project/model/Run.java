@@ -19,13 +19,13 @@ public class Run {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "name_run")
-    private String nameRun;
+    private String name;
     @Column(name = "distance")
     private double distance;
     @Column(name = "date")
     private Date date;
     @Column(name = "my_time")
-    private String myTime;
+    private String time;
     @Column(name = "city")
     private String city;
 }

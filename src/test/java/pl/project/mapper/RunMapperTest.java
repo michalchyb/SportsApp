@@ -28,10 +28,10 @@ public class RunMapperTest {
         RunDTO runDTO = runMapper.map(run);
 
         //then
-        assertThat(runDTO).hasFieldOrPropertyWithValue("nameRun", "Biegnij Warszawo");
+        assertThat(runDTO).hasFieldOrPropertyWithValue("name", "Biegnij Warszawo");
         assertThat(runDTO).hasFieldOrPropertyWithValue("distance", 5.0);
         assertThat(runDTO).hasFieldOrPropertyWithValue("date", new Date(2020, Calendar.APRIL, 21));
-        assertThat(runDTO).hasFieldOrPropertyWithValue("myTime", "27:40");
+        assertThat(runDTO).hasFieldOrPropertyWithValue("time", "27:40");
         assertThat(runDTO).hasFieldOrPropertyWithValue("city", "Warszawa");
 
     }
@@ -43,10 +43,10 @@ public class RunMapperTest {
     private Run prepareRun(Long id, String name, double distance, Date date, String myTime, String city) {
         return Run.builder()
                 .id(id)
-                .nameRun(name)
+                .name(name)
                 .distance(distance)
                 .date(date)
-                .myTime(myTime)
+                .time(myTime)
                 .city(city)
                 .build();
     }

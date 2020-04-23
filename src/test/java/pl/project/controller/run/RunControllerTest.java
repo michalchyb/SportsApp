@@ -86,10 +86,10 @@ public class RunControllerTest {
     private Run prepareRun(Long id, String name, double distance, Date date, String myTime, String city) {
         return Run.builder()
                 .id(id)
-                .nameRun(name)
+                .name(name)
                 .distance(distance)
                 .date(date)
-                .myTime(myTime)
+                .time(myTime)
                 .city(city)
                 .build();
     }

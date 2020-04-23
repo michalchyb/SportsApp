@@ -13,9 +13,9 @@ public class RunValidator implements Validator {
     @Override
     public void validate(Object target, Errors errors) {
         RunDTO runDTO = (RunDTO) target;
-        if (runDTO.getNameRun() == null) {
+        if (runDTO.getName() == null) {
             errors.reject("name", "name can not be null");
-        } else if (runDTO.getNameRun().length() <= 3) {
+        } else if (runDTO.getName().length() <= 3) {
             errors.reject("name", "name can not be that short, at least 3 characters");
         }
     }

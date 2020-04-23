@@ -11,9 +11,9 @@ import java.util.Date;
 @Builder
 public class RunDTO {
 
-    private String nameRun;
+    private String name;
     private double distance;
     private Date date;
-    private String myTime;
+    private String time;
     private String city;
 }
