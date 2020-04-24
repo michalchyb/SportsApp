@@ -6,6 +6,7 @@ import pl.project.model.Run;
 import pl.project.model.dto.RunDTO;
 import pl.project.service.RunService;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @CrossOrigin
@@ -43,7 +44,7 @@ public class RunController {
     @PostMapping(value = "dto/runs",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public Run addRun(@RequestBody RunDTO runDTO) {
+    public Run addRun(@Valid @RequestBody RunDTO runDTO) {
         return runService.addRun(runDTO);
     }
 
