@@ -1,6 +1,7 @@
 package pl.project.exception;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,24 +18,24 @@ class ErrorResponse {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss")
     private final LocalDateTime timeStamp;
     private final String code;
-    private final String message;
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private List<String> errors = new ArrayList<>();
     private final int statusCode;
+    private final String message;
 
 
-    ErrorResponse(LocalDateTime timeStamp, String code, String message, List<String> errors, int statusCode) {
+    public ErrorResponse(LocalDateTime timeStamp, String code, int statusCode, String message) {
         this.timeStamp = timeStamp;
         this.code = code;
-        this.message = message;
-        this.errors = errors;
         this.statusCode = statusCode;
+        this.message = message;
     }
 
-
-    ErrorResponse(LocalDateTime timeStamp, String code, String message, int statusCode) {
+    public ErrorResponse(LocalDateTime timeStamp, String code, List<String> errors, int statusCode, String message) {
         this.timeStamp = timeStamp;
         this.code = code;
-        this.message = message;
+        this.errors = errors;
         this.statusCode = statusCode;
+        this.message = message;
     }
 }
