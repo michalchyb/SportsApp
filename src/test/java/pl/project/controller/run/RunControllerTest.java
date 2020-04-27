@@ -1,5 +1,6 @@
 package pl.project.controller.run;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import pl.project.exception.RunsNotFoundException;
 import pl.project.model.Run;
+import pl.project.model.dto.RunDTO;
 import pl.project.service.RunService;
 
 import javax.ws.rs.core.MediaType;
@@ -23,7 +25,7 @@ import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -35,6 +37,9 @@ public class RunControllerTest {
 
     @Autowired
     private MockMvc mvc;
+
+    @Autowired
+    private ObjectMapper objectMapper;
 
     @MockBean
     private RunService runService;
@@ -69,10 +74,21 @@ public class RunControllerTest {
         mvc.perform(get("/api/runs")
                 .header("Authorization", token)
                 .contentType(MediaType.APPLICATION_JSON))
-                .andDo(print())
                 .andExpect(status().isNotFound());
     }
 
+
+    @Test
+    public void addRunTestCorrectValues() throws Exception {
+        RunDTO runDTO = new RunDTO("Biegnij Warszawo", 5.0, new Date(2000, Calendar.APRIL, 21), "00:27:40", "Warszawa");
+
+        mvc.perform(post("/api/dto/runs")
+                .header("Authorization", token)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(runDTO)))
+                .andExpect(status().isOk());
+    }
 
     private List<Run> prepareRunList() {
         List<Run> runList = new ArrayList<>();
@@ -83,13 +99,13 @@ public class RunControllerTest {
         return runList;
     }
 
-    private Run prepareRun(Long id, String name, double distance, Date date, String myTime, String city) {
+    private Run prepareRun(Long id, String name, double distance, Date date, String time, String city) {
         return Run.builder()
                 .id(id)
                 .name(name)
                 .distance(distance)
                 .date(date)
-                .time(myTime)
+                .time(time)
                 .city(city)
                 .build();
     }
