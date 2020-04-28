@@ -1,6 +1,7 @@
 package pl.project.service;
 
 import org.springframework.stereotype.Service;
+import pl.project.exception.RunNotFoundByIdException;
 import pl.project.exception.RunNotFoundException;
 import pl.project.exception.RunsNotFoundException;
 import pl.project.mapper.RunMapper;
@@ -67,8 +68,11 @@ public class RunService {
 
     }
 
-    public void deleteRun(String run) {
-        runRepository.deleteByName(run);
+    public void deleteRunById(Long id) {
+        if (!runRepository.existsById(id)) {
+            throw new RunNotFoundByIdException(id);
+        }
+        runRepository.deleteById(id);
     }
 
     public List<RunDTO> getRunsByDistance(Double distance) {

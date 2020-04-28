@@ -55,10 +55,10 @@ public class RunController {
         runService.updateRun(runDTO);
     }
 
-    @DeleteMapping(value = "dto/runs{name}",
+    @DeleteMapping(value = "/runs/{id}",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public void deleteRun(@PathVariable String nameRun) {
-        runService.deleteRun(nameRun);
+    public void deleteRun(@PathVariable Long id) {
+        runService.deleteRunById(id);
     }
 }

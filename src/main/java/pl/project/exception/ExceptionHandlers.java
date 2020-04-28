@@ -34,4 +34,13 @@ public class ExceptionHandlers extends BaseExceptionHandler {
         log.error("Runs not found thrown", ex);
         return new ErrorResponse(LocalDateTime.now(), "RUNS_NOT_FOUND", HttpStatus.NOT_FOUND.value(), ex.getMessage());
     }
+
+    @ResponseBody
+    @ExceptionHandler(RunNotFoundByIdException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ErrorResponse handleRunNotFoundByIdExceptionController(final RunNotFoundByIdException ex) {
+        log.error("Run with given id not found");
+        return new ErrorResponse(LocalDateTime.now(), "RUN_WITH_ID_NOT_FOUND", HttpStatus.NOT_FOUND.value(), ex.getMessage());
+
+    }
 }
