@@ -28,7 +28,7 @@ public class WeatherControllerTest {
     private WeatherService weatherService;
 
     @Test
-    public void getWeatherDto() throws Exception {
+    public void test_get_weather_success() throws Exception {
 
         WeatherDto weatherDto = prepareWeatherDto();
         given(weatherService.getWeather()).willReturn(weatherDto);

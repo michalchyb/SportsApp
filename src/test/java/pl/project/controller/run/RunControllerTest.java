@@ -23,7 +23,7 @@ import java.util.List;
 
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -48,7 +48,7 @@ public class RunControllerTest {
     private String token;
 
     @Test
-    public void getRunsTestCorrectValues() throws Exception {
+    public void test_get_all_success() throws Exception {
 
         List<Run> list = prepareRunList();
         when(runService.getRuns()).thenReturn(list);
@@ -68,7 +68,7 @@ public class RunControllerTest {
     }
 
     @Test
-    public void getRunsTestRunsNotFoundException() throws Exception {
+    public void test_get_all_fail_404_runs_not_found() throws Exception {
         given(runService.getRuns()).willThrow(new RunsNotFoundException());
 
         mvc.perform(get("/api/runs")
@@ -77,17 +77,46 @@ public class RunControllerTest {
                 .andExpect(status().isNotFound());
     }
 
+    @Test
+    public void test_get_by_id_success() throws Exception {
+        Run run = prepareRun(1L, "Biegnij Warszawo", 5.0, new Date(2020, Calendar.APRIL, 21), "27:40", "Warszawa");
+        when(runService.getRunById(1L)).thenReturn(run);
+
+        mvc.perform(get("/api/run/{id}", 1)
+                .header("Authorization", token)
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$").exists())
+                .andExpect(jsonPath("$").isNotEmpty())
+                .andExpect(jsonPath("$.id").value(1))
+                .andExpect(jsonPath("$.name").value("Biegnij Warszawo"))
+                .andExpect(status().isOk());
+        verify(runService, times(1)).getRunById(1L);
+
+
+    }
 
     @Test
-    public void addRunTestCorrectValues() throws Exception {
+    public void test_create_run_success() throws Exception {
         RunDTO runDTO = new RunDTO("Biegnij Warszawo", 5.0, new Date(2000, Calendar.APRIL, 21), "00:27:40", "Warszawa");
-
         mvc.perform(post("/api/dto/runs")
                 .header("Authorization", token)
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(runDTO)))
                 .andExpect(status().isOk());
+    }
+
+    @Test
+    public void test_create_run_fail_400_bad_request() throws Exception {
+        RunDTO runDTO = new RunDTO("Biegnij Warszawo", 5.0, new Date(2000, Calendar.APRIL, 21), "00:27:4s", "Warszawa");
+
+        mvc.perform(post("/api/dto/runs")
+                .header("Authorization", token)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(runDTO)))
+                .andExpect(status().isBadRequest());
+
     }
 
     private List<Run> prepareRunList() {

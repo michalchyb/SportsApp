@@ -16,7 +16,7 @@ public class LocalizationMapperTest {
     }
 
     @Test
-    public void testMapEntityToDto() {
+    public void test_map_entity_to_dto() {
         // given
         Localization localization = prepareLocalizationObject();
         // when

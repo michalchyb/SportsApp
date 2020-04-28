@@ -21,7 +21,7 @@ public class WeatherMapperTest {
     }
 
     @Test
-    public void testMapEntityToDto() {
+    public void test_map_entity_to_dto() {
 
         // given
         WeatherObject weatherObject = prepareWeatherObject();

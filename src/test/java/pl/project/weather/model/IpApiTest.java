@@ -15,7 +15,7 @@ public class IpApiTest {
     private IpApi ipApi;
 
     @Test
-    public void getCorrectValueFromAppProperties() {
+    public void test_get_value_from_application_properties() {
         String url = ipApi.getUrl();
         Assert.assertEquals("http://api.ipstack.com/check?access_key=", url);
     }

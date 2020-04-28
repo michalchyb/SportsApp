@@ -15,13 +15,13 @@ public class OpenWeatherApiTest {
     private OpenWeatherApi openWeatherApi;
 
     @Test
-    public void getURLCorrectValueFromAppProperties() {
+    public void test_get_value_from_application_properties_1() {
         String url = openWeatherApi.getUrl();
         Assert.assertEquals("http://api.openweathermap.org/data/2.5/weather?q=", url);
     }
 
     @Test
-    public void getUnitCorrectValueFromAppProperties() {
+    public void test_get_value_from_application_properties_2() {
         String unit = openWeatherApi.getUnit();
         Assert.assertEquals("&units=metric", unit);
     }

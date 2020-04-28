@@ -25,7 +25,7 @@ public class RunServiceTest {
     RunService runService;
 
     @Test
-    public void getRunByIdTest() {
+    public void test_get_run_by_id() {
         Run dummyRun = prepareRun(1L, "Biegnij Warszawo", 5.0, new Date(2020, Calendar.APRIL, 21), "54:90", "Warszawa");
 
         when(runRepository.findById(1L)).thenReturn(Optional.ofNullable(dummyRun));
@@ -38,7 +38,7 @@ public class RunServiceTest {
 
 
     @Test
-    public void getRunsFindAll() {
+    public void test_get_all() {
         List<Run> list = prepareRunList();
         when(runRepository.findAll()).thenReturn(list);
 
@@ -49,7 +49,7 @@ public class RunServiceTest {
     }
 
     @Test
-    public void getRunsThrowException() {
+    public void test_get_run_throw_exception() {
         List<Run> list = new ArrayList<>();
 
         when(runRepository.findAll()).thenReturn(list);

@@ -20,7 +20,7 @@ public class RunMapperTest {
     }
 
     @Test
-    public void map() {
+    public void test_map() {
         //given
         Run run = prepareRun(1L, "Biegnij Warszawo", 5.0, new Date(2020, Calendar.APRIL, 21), "27:40", "Warszawa");
 
@@ -37,7 +37,7 @@ public class RunMapperTest {
     }
 
     @Test
-    public void reverseMap() {
+    public void test_reverse_map() {
     }
 
     private Run prepareRun(Long id, String name, double distance, Date date, String time, String city) {
