@@ -24,8 +24,7 @@ import java.util.List;
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -116,6 +115,23 @@ public class RunControllerTest {
                 .accept(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(runDTO)))
                 .andExpect(status().isBadRequest());
+
+    }
+
+    @Test
+    public void test_delete_user_success() throws Exception {
+        Run run = prepareRun(1L, "Biegnij Warszawo", 5.0, new Date(2020, Calendar.APRIL, 21), "27:40", "Warszawa");
+
+        when(runService.getRunById(run.getId())).thenReturn(run);
+        doNothing().when(runService).deleteRunById(run.getId());
+
+        mvc.perform(delete("/api/runs/{id}", run.getId())
+                .header("Authorization", token)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+        verify(runService, times(1)).deleteRunById(run.getId());
+        verifyNoMoreInteractions(runService);
 
     }
 
