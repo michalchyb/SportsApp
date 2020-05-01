@@ -11,6 +11,7 @@ public class RunMapper implements Mapper<Run, RunDTO> {
     public RunDTO map(Run from) {
         return RunDTO
                 .builder()
+                .id(from.getId())
                 .name(from.getName())
                 .distance(from.getDistance())
                 .date(from.getDate())

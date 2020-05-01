@@ -12,7 +12,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Builder
 public class RunDTO {
-
+    private Long id;
     @NotBlank(message = "Name can not be empty")
     @NotNull(message = "Name can not be null")
     private String name;
@@ -38,4 +38,5 @@ public class RunDTO {
     @NotNull(message = "City can not be null")
     @Pattern(regexp = "^[a-zA-Z]+(?:[\\s-][a-zA-Z]+)*$")
     private String city;
+
 }
