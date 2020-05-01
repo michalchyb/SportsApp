@@ -1,6 +1,7 @@
 package pl.project.model;
 
 import lombok.*;
+import pl.project.model.timestamp.AbstractTimestampEntity;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -13,7 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "runs")
-public class Run {
+public class Run extends AbstractTimestampEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
