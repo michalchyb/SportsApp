@@ -47,14 +47,14 @@ public class RunControllerTest {
     private String token;
 
     @Test
-    public void test_get_all_success() throws Exception {
+    public void test_get_all_runs_success() throws Exception {
 
         List<Run> list = prepareRunList();
         when(runService.getRuns()).thenReturn(list);
 
-        mvc.perform(get("/api/runs")
+        mvc.perform(get("/api/runs ")
                 .header("Authorization", token)
-                .contentType("application/json"))
+                .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)))
                 .andExpect(jsonPath("$[0]").exists())
@@ -67,7 +67,7 @@ public class RunControllerTest {
     }
 
     @Test
-    public void test_get_all_fail_404_runs_not_found() throws Exception {
+    public void test_get_all_runs_fail_404_runs_not_found() throws Exception {
         given(runService.getRuns()).willThrow(new RunsNotFoundException());
 
         mvc.perform(get("/api/runs")
@@ -77,7 +77,7 @@ public class RunControllerTest {
     }
 
     @Test
-    public void test_get_by_id_success() throws Exception {
+    public void test_get_run_by_id_success() throws Exception {
         Run run = prepareRun(1L, "Biegnij Warszawo", 5.0, new Date(2020, Calendar.APRIL, 21), "27:40", "Warszawa");
         when(runService.getRunById(1L)).thenReturn(run);
 
@@ -96,7 +96,7 @@ public class RunControllerTest {
 
     @Test
     public void test_create_run_success() throws Exception {
-        RunDTO runDTO = new RunDTO("Biegnij Warszawo", 5.0, new Date(2000, Calendar.APRIL, 21), "00:27:40", "Warszawa");
+        RunDTO runDTO = new RunDTO(1L, "Biegnij Warszawo", 5.0, new Date(2000, Calendar.APRIL, 21), "00:27:40", "Warszawa");
         mvc.perform(post("/api/dto/runs")
                 .header("Authorization", token)
                 .contentType(MediaType.APPLICATION_JSON)
@@ -107,7 +107,7 @@ public class RunControllerTest {
 
     @Test
     public void test_create_run_fail_400_bad_request() throws Exception {
-        RunDTO runDTO = new RunDTO("Biegnij Warszawo", 5.0, new Date(2000, Calendar.APRIL, 21), "00:27:4s", "Warszawa");
+        RunDTO runDTO = new RunDTO(1L, "Biegnij Warszawo", 5.0, new Date(2000, Calendar.APRIL, 21), "00:27:4s", "Warszawa");
 
         mvc.perform(post("/api/dto/runs")
                 .header("Authorization", token)
@@ -122,10 +122,10 @@ public class RunControllerTest {
     public void test_delete_user_success() throws Exception {
         Run run = prepareRun(1L, "Biegnij Warszawo", 5.0, new Date(2020, Calendar.APRIL, 21), "27:40", "Warszawa");
 
-        when(runService.getRunById(run.getId())).thenReturn(run);
+        when(runService.getRunById(1L)).thenReturn(run);
         doNothing().when(runService).deleteRunById(run.getId());
 
-        mvc.perform(delete("/api/runs/{id}", run.getId())
+        mvc.perform(delete("/api/dto/runs/{id}", run.getId())
                 .header("Authorization", token)
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))

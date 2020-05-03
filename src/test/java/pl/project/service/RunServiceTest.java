@@ -38,7 +38,7 @@ public class RunServiceTest {
 
 
     @Test
-    public void test_get_all() {
+    public void test_get_all_runs() {
         List<Run> list = prepareRunList();
         when(runRepository.findAll()).thenReturn(list);
 
@@ -49,7 +49,7 @@ public class RunServiceTest {
     }
 
     @Test
-    public void test_get_run_throw_exception() {
+    public void test_get_runs_throw_exception() {
         List<Run> list = new ArrayList<>();
 
         when(runRepository.findAll()).thenReturn(list);
@@ -77,4 +77,6 @@ public class RunServiceTest {
                 .city(city)
                 .build();
     }
+
+
 }
