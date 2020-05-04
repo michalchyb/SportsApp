@@ -24,7 +24,8 @@
         <poi.version>4.1.0</poi.version>
         <jjwt.version>0.9.1</jjwt.version>
         <junit.jupiter.version>5.2.0</junit.jupiter.version>
-
+        <decimal4j.version>1.0.3</decimal4j.version>
+        
     </properties>
     <dependencies>
         <dependency>
@@ -122,12 +123,16 @@
             <artifactId>jjwt</artifactId>
             <version>${jjwt.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit.jupiter.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.decimal4j</groupId>
+            <artifactId>decimal4j</artifactId>
+            <version>${decimal4j.version}</version>
         </dependency>
     </dependencies>
     <build>
