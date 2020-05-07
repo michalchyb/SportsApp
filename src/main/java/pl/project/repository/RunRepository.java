@@ -1,5 +1,6 @@
 package pl.project.repository;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import pl.project.model.Run;
@@ -9,9 +10,10 @@ import java.util.Optional;
 
 public interface RunRepository extends JpaRepository<Run, Long> {
 
-//    Run findById(long id);
-
     Optional<Run> findRunByName(String name);
+
+    @Query("Select r from Run r")
+    List<Run> findAllRuns(Pageable page);
 
     void deleteById(Long id);
 

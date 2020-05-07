@@ -50,7 +50,7 @@ public class RunControllerTest {
     public void test_get_all_runs_success() throws Exception {
 
         List<Run> list = prepareRunList();
-        when(runService.getRuns()).thenReturn(list);
+        when(runService.getRuns(0)).thenReturn(list);
 
         mvc.perform(get("/api/runs ")
                 .header("Authorization", token)
@@ -68,7 +68,7 @@ public class RunControllerTest {
 
     @Test
     public void test_get_all_runs_fail_404_runs_not_found() throws Exception {
-        given(runService.getRuns()).willThrow(new RunsNotFoundException());
+        given(runService.getRuns(0)).willThrow(new RunsNotFoundException());
 
         mvc.perform(get("/api/runs")
                 .header("Authorization", token)

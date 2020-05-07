@@ -23,8 +23,10 @@ public class RunController {
     @GetMapping(value = "runs",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Run> getRuns() {
-        return runService.getRuns();
+    public List<Run> getRuns(@RequestParam(required = false) int page) {
+        int pageNumber = page >= 0 ? page : 0;
+        return runService.getRuns(pageNumber);
+
     }
 
     @GetMapping(value = "dto/runs",

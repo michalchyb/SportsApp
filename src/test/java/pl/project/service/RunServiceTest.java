@@ -42,7 +42,7 @@ public class RunServiceTest {
         List<Run> list = prepareRunList();
         when(runRepository.findAll()).thenReturn(list);
 
-        List<Run> runsList = runService.getRuns();
+        List<Run> runsList = runService.getRuns(0);
 
         Assertions.assertEquals(2, runsList.size());
         verify(runRepository, times(1)).findAll();
@@ -54,7 +54,7 @@ public class RunServiceTest {
 
         when(runRepository.findAll()).thenReturn(list);
 
-        Assertions.assertThrows(RunsNotFoundException.class, () -> runService.getRuns());
+        Assertions.assertThrows(RunsNotFoundException.class, () -> runService.getRuns(0));
 
     }
 
