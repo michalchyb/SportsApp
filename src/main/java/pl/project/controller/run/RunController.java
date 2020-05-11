@@ -1,5 +1,6 @@
 package pl.project.controller.run;
 
+import org.springframework.data.domain.Sort;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import pl.project.model.Run;
@@ -23,9 +24,9 @@ public class RunController {
     @GetMapping(value = "runs",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Run> getRuns(@RequestParam(required = false) int page) {
+    public List<Run> getRuns(@RequestParam(required = false) int page, Sort.Direction sort) {
         int pageNumber = page >= 0 ? page : 0;
-        return runService.getRuns(pageNumber);
+        return runService.getRuns(pageNumber, sort);
 
     }
 

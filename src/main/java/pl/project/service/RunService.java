@@ -1,6 +1,7 @@
 package pl.project.service;
 
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import pl.project.exception.RunNotFoundByIdException;
 import pl.project.exception.RunNotFoundException;
@@ -26,8 +27,8 @@ public class RunService {
         this.runMapper = runMapper;
     }
 
-    public List<Run> getRuns(int page) {
-        List<Run> runs = runRepository.findAllRuns(PageRequest.of(page, PAGE_SIZE));
+    public List<Run> getRuns(int page, Sort.Direction sort) {
+        List<Run> runs = runRepository.findAllRuns(PageRequest.of(page, PAGE_SIZE, Sort.by(sort, "id")));
         if (runs.isEmpty()) {
             throw new RunsNotFoundException();
         }
