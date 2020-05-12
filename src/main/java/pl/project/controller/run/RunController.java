@@ -22,16 +22,14 @@ public class RunController {
     }
 
     @GetMapping(value = "runs",
-            consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Run> getRuns(@RequestParam(required = false) int page, Sort.Direction sort) {
-        int pageNumber = page >= 0 ? page : 0;
+    public List<Run> getRuns(@RequestParam(required = false) Integer page, Sort.Direction sort) {
+        Integer pageNumber = (page == null || page == 0) ? 0 : page;
         return runService.getRuns(pageNumber, sort);
 
     }
 
     @GetMapping(value = "dto/runs",
-            consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public List<RunDTO> getRunsDTO() {
         return runService.getRunsDTO();
@@ -59,7 +57,6 @@ public class RunController {
     }
 
     @DeleteMapping(value = "dto/runs/{id}",
-            consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public void deleteRun(@PathVariable Long id) {
         runService.deleteRunById(id);

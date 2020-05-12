@@ -27,7 +27,7 @@ public class RunService {
         this.runMapper = runMapper;
     }
 
-    public List<Run> getRuns(int page, Sort.Direction sort) {
+    public List<Run> getRuns(Integer page, Sort.Direction sort) {
         List<Run> runs = runRepository.findAllRuns(PageRequest.of(page, PAGE_SIZE, Sort.by(sort, "id")));
         if (runs.isEmpty()) {
             throw new RunsNotFoundException();
