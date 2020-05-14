@@ -11,5 +11,5 @@ For linux systems run commands below:
 
 Docker will run on port 9090. After getting http://localhost:9090/ for the first time you might need to install plugins.
 After that you might use and configure jenkins for you purposes.
-All configuration files will be stored in `your_path:/var/jenkins_home`. Running jenkins container once again will load previous configuration.
+All configuration files will be stored in `your_path:/var/jenkins_home`. Running jenkins container once again will load previous configuration...
 
