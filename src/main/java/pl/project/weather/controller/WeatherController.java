@@ -19,7 +19,6 @@ public class WeatherController {
     }
 
     @GetMapping(value = "weather",
-            consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public WeatherDto getWeather() {
         return weatherService.getWeather();

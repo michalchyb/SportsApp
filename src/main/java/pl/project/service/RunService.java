@@ -8,6 +8,7 @@ import pl.project.exception.RunNotFoundException;
 import pl.project.exception.RunsNotFoundException;
 import pl.project.mapper.RunMapper;
 import pl.project.model.Run;
+import pl.project.model.SortBy;
 import pl.project.model.dto.RunDTO;
 import pl.project.repository.RunRepository;
 
@@ -27,8 +28,8 @@ public class RunService {
         this.runMapper = runMapper;
     }
 
-    public List<Run> getRuns(Integer page, Sort.Direction sort) {
-        List<Run> runs = runRepository.findAllRuns(PageRequest.of(page, PAGE_SIZE, Sort.by(sort, "id")));
+    public List<Run> getRuns(Integer page, SortBy sortBy, Sort.Direction sortDirection) {
+        List<Run> runs = runRepository.findAllRuns(PageRequest.of(page, PAGE_SIZE, Sort.by(sortDirection, sortBy.toString().toLowerCase())));
         if (runs.isEmpty()) {
             throw new RunsNotFoundException();
         }

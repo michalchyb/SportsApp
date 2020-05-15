@@ -2,6 +2,7 @@ package pl.project.exception;
 
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import org.slf4j.Logger;
+import org.springframework.core.convert.ConversionFailedException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -37,6 +38,15 @@ public abstract class BaseExceptionHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ErrorResponse handleInvalidFormatException(final InvalidFormatException ex) {
         log.error("Request validation error", ex);
+        return new ErrorResponse(LocalDateTime.now(), "BAD_REQUEST", HttpStatus.BAD_REQUEST.value(), ex.getMessage());
+    }
+
+
+    @ResponseBody
+    @ExceptionHandler(ConversionFailedException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ErrorResponse handleConversionFailedException(final ConversionFailedException ex) {
+        log.error("Bad sorting properties", ex);
         return new ErrorResponse(LocalDateTime.now(), "BAD_REQUEST", HttpStatus.BAD_REQUEST.value(), ex.getMessage());
     }
 }

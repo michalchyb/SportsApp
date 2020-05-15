@@ -1,9 +1,10 @@
-package pl.project.controller.run;
+package pl.project.controller;
 
 import org.springframework.data.domain.Sort;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import pl.project.model.Run;
+import pl.project.model.SortBy;
 import pl.project.model.dto.RunDTO;
 import pl.project.service.RunService;
 
@@ -23,9 +24,9 @@ public class RunController {
 
     @GetMapping(value = "runs",
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Run> getRuns(@RequestParam(required = false) Integer page, Sort.Direction sort) {
+    public List<Run> getRuns(@RequestParam(required = false) Integer page, @RequestParam SortBy sortBy, Sort.Direction sortDirection) {
         Integer pageNumber = (page == null || page == 0) ? 0 : page;
-        return runService.getRuns(pageNumber, sort);
+        return runService.getRuns(pageNumber, sortBy, sortDirection);
 
     }
 
