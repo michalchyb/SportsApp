@@ -3,6 +3,7 @@ package pl.project.service;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import pl.project.exception.RunNotFoundByIdException;
 import pl.project.exception.RunNotFoundException;
 import pl.project.exception.RunsNotFoundException;
@@ -58,6 +59,7 @@ public class RunService {
         return runRepository.save(runMapper.reverseMap(runDTO));
     }
 
+    @Transactional
     public void updateRun(RunDTO runDTO) {
         runRepository.findById(runDTO.getId())
                 .ifPresent(r -> {
@@ -71,6 +73,7 @@ public class RunService {
 
     }
 
+    @Transactional
     public void deleteRunById(Long id) {
         if (!runRepository.existsById(id)) {
             throw new RunNotFoundByIdException(id);

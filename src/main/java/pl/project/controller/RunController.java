@@ -24,8 +24,9 @@ public class RunController {
 
     @GetMapping(value = "runs",
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Run> getRuns(@RequestParam(required = false) Integer page, @RequestParam SortBy sortBy, Sort.Direction sortDirection) {
+    public List<Run> getRuns(@RequestParam(required = false) Integer page, @RequestParam SortBy sortBy, Sort.Direction direction) {
         Integer pageNumber = (page == null || page == 0) ? 0 : page;
+        Sort.Direction sortDirection = direction != null ? direction : Sort.Direction.ASC;
         return runService.getRuns(pageNumber, sortBy, sortDirection);
 
     }
