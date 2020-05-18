@@ -63,4 +63,9 @@ public class RunController {
     public void deleteRun(@PathVariable Long id) {
         runService.deleteRunById(id);
     }
+
+    @GetMapping("runs/file")
+    public void createExcelFile() {
+        runService.createFile();
+    }
 }

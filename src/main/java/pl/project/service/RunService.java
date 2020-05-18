@@ -1,9 +1,11 @@
 package pl.project.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import pl.project.common.extra.ExcelCreator;
 import pl.project.exception.RunNotFoundByIdException;
 import pl.project.exception.RunNotFoundException;
 import pl.project.exception.RunsNotFoundException;
@@ -13,11 +15,13 @@ import pl.project.model.SortBy;
 import pl.project.model.dto.RunDTO;
 import pl.project.repository.RunRepository;
 
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
 @Service
+@Slf4j
 public class RunService {
 
     private static final int PAGE_SIZE = 10;
@@ -107,5 +111,14 @@ public class RunService {
                 .stream()
                 .map(runMapper::map)
                 .collect(Collectors.toList());
+    }
+
+    public void createFile() {
+        ExcelCreator<RunDTO> excelCreator = new ExcelCreator<>(RunDTO.class);
+        try {
+            excelCreator.createFile(getRunsDTO(), "src/", "RunsReport");
+        } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException | IOException e) {
+            log.error(e.getMessage());
+        }
     }
 }
