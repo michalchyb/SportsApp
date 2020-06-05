@@ -75,7 +75,7 @@ java.lang.IllegalStateException: EntityManagerFactory is closed
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) [spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at com.sun.proxy.$Proxy129.findAll(Unknown Source) [?:?]
 	at pl.project.service.RunService.getRuns(RunService.java:27) [classes/:?]
-	at pl.project.controller.run.RunController.getRuns(RunController.java:38) [classes/:?]
+	at pl.project.controller.RunController.getRuns(RunController.java:38) [classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_242]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_242]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_242]
