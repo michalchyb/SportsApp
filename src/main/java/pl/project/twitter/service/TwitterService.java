@@ -1,10 +1,9 @@
 package pl.project.twitter.service;
 
 import org.springframework.stereotype.Service;
-import twitter4j.Status;
-import twitter4j.Twitter;
-import twitter4j.TwitterException;
-import twitter4j.TwitterFactory;
+import pl.project.twitter.mapper.TweetMapper;
+import pl.project.twitter.model.TweetDto;
+import twitter4j.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,16 +11,22 @@ import java.util.stream.Collectors;
 @Service
 public class TwitterService {
 
-    public static Twitter getTwitterinstance() {
+    private TweetMapper tweetMapper;
+
+    public TwitterService(TweetMapper tweetMapper) {
+        this.tweetMapper = tweetMapper;
+    }
+
+    public static Twitter getTwitterInstance() {
         return TwitterFactory.getSingleton();
     }
 
-    public List<String> getLatestTweets() throws TwitterException {
-        Twitter twitter = getTwitterinstance();
-
-        List<Status> statuses = twitter.getHomeTimeline();
+    public List<TweetDto> getLatestTweets() throws TwitterException {
+        Twitter twitter = getTwitterInstance();
+        Paging paging = new Paging(1, 10);
+        List<Status> statuses = twitter.getHomeTimeline(paging);
         return statuses.stream()
-                .map(Status::getText)
+                .map(tweetMapper::map)
                 .collect(Collectors.toList());
     }
 }

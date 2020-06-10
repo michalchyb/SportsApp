@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import pl.project.twitter.model.TweetDto;
 import pl.project.twitter.service.TwitterService;
 import twitter4j.TwitterException;
 
@@ -23,8 +24,7 @@ public class TwitterController {
 
     @GetMapping(value = "tweets",
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<String> getTweetsTimeLine() throws TwitterException {
+    public List<TweetDto> getTweetsTimeLine() throws TwitterException {
         return twitterService.getLatestTweets();
     }
-
 }
