@@ -10,6 +10,7 @@ public class TweetMapper {
         return TweetDto.builder()
                 .author(from.getUser().getName())
                 .content(from.getText())
+                .accountName(from.getUser().getScreenName())
                 .build();
     }
 }
