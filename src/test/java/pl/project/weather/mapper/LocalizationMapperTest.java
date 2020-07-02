@@ -3,8 +3,9 @@ package pl.project.weather.mapper;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import pl.project.weather.model.dto.LocalizationDto;
-import pl.project.weather.model.localization.Localization;
+import pl.project.mapper.LocalizationMapper;
+import pl.project.model.dto.LocalizationDto;
+import pl.project.model.localization.Localization;
 
 public class LocalizationMapperTest {
 

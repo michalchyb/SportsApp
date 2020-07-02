@@ -3,10 +3,11 @@ package pl.project.weather.mapper;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import pl.project.weather.model.dto.WeatherDto;
-import pl.project.weather.model.weather.Main;
-import pl.project.weather.model.weather.Weather;
-import pl.project.weather.model.weather.WeatherObject;
+import pl.project.mapper.WeatherMapper;
+import pl.project.model.dto.WeatherDto;
+import pl.project.model.weather.Main;
+import pl.project.model.weather.Weather;
+import pl.project.model.weather.WeatherObject;
 
 import java.util.ArrayList;
 import java.util.List;

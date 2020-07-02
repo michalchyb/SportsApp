@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.multipart.MaxUploadSizeExceededException;
 
 import java.time.LocalDateTime;
 
@@ -43,4 +44,14 @@ public class ExceptionHandlers extends BaseExceptionHandler {
         return new ErrorResponse(LocalDateTime.now(), "RUN_WITH_ID_NOT_FOUND", HttpStatus.NOT_FOUND.value(), ex.getMessage());
 
     }
+
+    @ResponseBody
+    @ExceptionHandler(MaxUploadSizeExceededException.class)
+    @ResponseStatus(HttpStatus.EXPECTATION_FAILED)
+    public ErrorResponse handleMaxUploadSizeExceededExceptionController(final MaxUploadSizeExceededException ex) {
+        log.error("File is too large");
+        return new ErrorResponse(LocalDateTime.now(), "EXPECTATION_FAILED", HttpStatus.EXPECTATION_FAILED.value(), ex.getMessage());
+
+    }
+
 }
