@@ -8,10 +8,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
+import pl.project.exception.ExtensionError;
 import pl.project.exception.ResponseMessage;
 import pl.project.model.FileInfo;
 import pl.project.service.FilesStorageService;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,6 +23,8 @@ import java.util.stream.Collectors;
 public class FilesController {
 
     FilesStorageService filesStorageService;
+    private static final List<String> contentTypes = Arrays.asList("image/png", "image/jpeg", "image/gif");
+
 
     public FilesController(FilesStorageService filesStorageService) {
         this.filesStorageService = filesStorageService;
@@ -30,7 +34,11 @@ public class FilesController {
     @PostMapping("/upload")
     public ResponseEntity<ResponseMessage> uploadFile(@RequestParam("file") MultipartFile file) {
         String message;
+        if (!contentTypes.contains(file.getContentType())) {
+            throw new ExtensionError(contentTypes);
+        }
         try {
+
             filesStorageService.save(file);
 
             message = "Uploaded the file successfully: " + file.getOriginalFilename();

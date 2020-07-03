@@ -32,6 +32,7 @@ public class FilesStorageServiceImpl implements FilesStorageService {
     public void save(MultipartFile file) {
         try {
             Files.copy(file.getInputStream(), this.root.resolve(file.getOriginalFilename()));
+
         } catch (IOException e) {
             throw new RuntimeException("Could not store this file Error: " + e.getMessage());
 

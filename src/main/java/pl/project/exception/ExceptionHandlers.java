@@ -54,4 +54,12 @@ public class ExceptionHandlers extends BaseExceptionHandler {
 
     }
 
+    @ResponseBody
+    @ExceptionHandler(ExtensionError.class)
+    @ResponseStatus(HttpStatus.NOT_ACCEPTABLE)
+    public ErrorResponse handleExtensionError(final ExtensionError ex) {
+        log.error("Extension error");
+        return new ErrorResponse(LocalDateTime.now(), "EXTENSION_ERROR", HttpStatus.NOT_ACCEPTABLE.value(), ex.getMessage());
+
+    }
 }
