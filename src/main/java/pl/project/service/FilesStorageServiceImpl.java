@@ -20,7 +20,7 @@ public class FilesStorageServiceImpl implements FilesStorageService {
     @Override
     public void init() {
         try {
-            if (Files.notExists(root)) {
+            if (root.toFile().exists()) {
                 Files.createDirectory(root);
             }
         } catch (IOException e) {
@@ -40,10 +40,10 @@ public class FilesStorageServiceImpl implements FilesStorageService {
     }
 
     @Override
-    public Resource load(String filename) {
+    public Resource load(String fileName) {
 
         try {
-            Path file = root.resolve(filename);
+            Path file = root.resolve(fileName);
             Resource resource = new UrlResource(file.toUri());
 
             if (resource.exists() || resource.isReadable()) {
@@ -68,6 +68,16 @@ public class FilesStorageServiceImpl implements FilesStorageService {
                     .map(this.root::relativize);
         } catch (IOException e) {
             throw new RuntimeException("Could not load the files!");
+        }
+    }
+
+    @Override
+    public boolean delete(String fileName) {
+        Path file = root.resolve(fileName);
+        try {
+            return Files.deleteIfExists(file);
+        } catch (IOException e) {
+            throw new RuntimeException("Could not delete this file!");
         }
     }
 }

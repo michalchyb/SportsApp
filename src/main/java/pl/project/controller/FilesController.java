@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/")
 public class FilesController {
 
-    FilesStorageService filesStorageService;
+    private FilesStorageService filesStorageService;
     private static final List<String> contentTypes = Arrays.asList("image/png", "image/jpeg", "image/gif");
 
 
@@ -66,5 +66,16 @@ public class FilesController {
         Resource file = filesStorageService.load(filename);
         return ResponseEntity.ok()
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getFilename() + "\"").body(file);
+    }
+
+    @DeleteMapping("/delete/{fileName}")
+    public ResponseEntity<ResponseMessage> deleteByName(@PathVariable String fileName) {
+        String message;
+        if (!filesStorageService.delete(fileName)) {
+            message = "Could not delete:  " + fileName;
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ResponseMessage(message));
+        }
+        message = "File  " + fileName + " deleted";
+        return ResponseEntity.status(HttpStatus.OK).body(new ResponseMessage(message));
     }
 }
