@@ -20,7 +20,7 @@ public class FilesStorageServiceImpl implements FilesStorageService {
     @Override
     public void init() {
         try {
-            if (root.toFile().exists()) {
+            if (!root.toFile().exists()) {
                 Files.createDirectory(root);
             }
         } catch (IOException e) {
