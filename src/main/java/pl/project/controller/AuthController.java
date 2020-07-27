@@ -1,6 +1,7 @@
 package pl.project.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -19,6 +20,7 @@ import pl.project.repository.RoleRepository;
 import pl.project.repository.UserRepository;
 import pl.project.security.jwt.JwtUtils;
 import pl.project.security.services.UserDetailsImpl;
+import pl.project.service.mail.MailService;
 
 import javax.validation.Valid;
 import java.util.HashSet;
@@ -44,6 +46,10 @@ public class AuthController {
 
     @Autowired
     private JwtUtils jwtUtils;
+
+    @Autowired
+    @Qualifier("consoleMailService")
+    private MailService mailService;
 
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signupRequest) {
@@ -91,8 +97,9 @@ public class AuthController {
         user.setRoles(roles);
         userRepository.save(user);
 
-        return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
+        mailService.sendEmail(user.getEmail(), new MessageResponse("User registered successfully to the devrun23.pl"));
 
+        return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
     }
 
     @PostMapping("/signin")
