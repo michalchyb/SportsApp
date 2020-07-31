@@ -2,6 +2,7 @@ package pl.project.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -32,6 +33,12 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
+    private static final String SUBJECT = "Registration success";
+    private static final String SUCCESS_MESSAGE = "User registered successfully to the devrun23.pl";
+
+    @Value("${spring.mail.username}")
+    private String ORIGIN_MAIL_USERNAME;
+
     @Autowired
     private UserRepository userRepository;
 
@@ -97,7 +104,7 @@ public class AuthController {
         user.setRoles(roles);
         userRepository.save(user);
 
-        mailService.sendEmail(user.getEmail(), new MessageResponse("User registered successfully to the devrun23.pl"));
+        mailService.sendEmail(ORIGIN_MAIL_USERNAME, user.getEmail(), SUBJECT, SUCCESS_MESSAGE);
 
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
     }
