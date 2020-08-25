@@ -14,4 +14,36 @@ public class City {
     private String name;
     private double longitude;
     private double langitude;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public double getLangitude() {
+        return langitude;
+    }
+
+    public void setLangitude(double langitude) {
+        this.langitude = langitude;
+    }
 }

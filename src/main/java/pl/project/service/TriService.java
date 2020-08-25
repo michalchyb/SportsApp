@@ -6,5 +6,7 @@ import java.util.List;
 
 public interface TriService {
     List<Tri> getTriathlons();
+
+    Tri addTri(Tri tri);
 }
 

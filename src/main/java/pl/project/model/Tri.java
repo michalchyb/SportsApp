@@ -23,6 +23,9 @@ public class Tri {
     @Column(name = "date")
     private Date date;
 
+    @Column(name = "city")
     private City city;
+
+    @Column(name = "distance")
     private Distance distance;
 }

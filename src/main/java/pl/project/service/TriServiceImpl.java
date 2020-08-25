@@ -18,4 +18,9 @@ public class TriServiceImpl implements TriService {
     public List<Tri> getTriathlons() {
         return triRepository.findAll();
     }
+
+    @Override
+    public Tri addTri(Tri tri) {
+        return triRepository.save(tri);
+    }
 }
