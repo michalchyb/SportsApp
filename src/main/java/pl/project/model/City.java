@@ -1,11 +1,12 @@
 package pl.project.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
+@Table(name = "city")
 public class City {
 
     @Id
@@ -13,7 +14,11 @@ public class City {
     private Long id;
     private String name;
     private double longitude;
-    private double langitude;
+    private double latitude;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "city", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Tri> tris;
 
     public Long getId() {
         return id;
@@ -39,11 +44,19 @@ public class City {
         this.longitude = longitude;
     }
 
-    public double getLangitude() {
-        return langitude;
+    public double getLatitude() {
+        return latitude;
     }
 
-    public void setLangitude(double langitude) {
-        this.langitude = langitude;
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public Set<Tri> getTris() {
+        return tris;
+    }
+
+    public void setTris(Set<Tri> tris) {
+        this.tris = tris;
     }
 }
