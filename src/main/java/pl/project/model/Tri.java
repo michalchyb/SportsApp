@@ -1,15 +1,14 @@
 package pl.project.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(name = "tri")
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -23,9 +22,14 @@ public class Tri {
     @Column(name = "date")
     private Date date;
 
-    @Column(name = "city")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "city_id")
     private City city;
 
     @Column(name = "distance")
     private Distance distance;
+
+    @Column(name = "time")
+    private String time;
 }
+

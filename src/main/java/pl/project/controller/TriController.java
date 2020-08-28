@@ -18,15 +18,15 @@ public class TriController {
         this.triService = triService;
     }
 
-    @GetMapping(value = "tris",produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Tri> getTris(){
+    @GetMapping(value = "tris", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<Tri> getTris() {
         return triService.getTriathlons();
     }
 
     @PostMapping(value = "tris",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public Tri addTri( @RequestBody Tri tri) {
+    public Tri addTri(@RequestBody Tri tri) {
         return triService.addTri(tri);
     }
 }
