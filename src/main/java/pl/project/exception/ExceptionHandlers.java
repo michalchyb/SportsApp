@@ -37,6 +37,14 @@ public class ExceptionHandlers extends BaseExceptionHandler {
     }
 
     @ResponseBody
+    @ExceptionHandler(TrisNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ErrorResponse handleTrisNotFoundController(final TrisNotFoundException ex) {
+        log.error("Triathlons not found thrown", ex);
+        return new ErrorResponse(LocalDateTime.now(), "TRIATHLONS_NOT_FOUND", HttpStatus.NOT_FOUND.value(), ex.getMessage());
+    }
+
+    @ResponseBody
     @ExceptionHandler(RunNotFoundByIdException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ErrorResponse handleRunNotFoundByIdExceptionController(final RunNotFoundByIdException ex) {
