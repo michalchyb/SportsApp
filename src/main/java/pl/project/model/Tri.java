@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.Date;
 
+
 @Entity
 @Table(name = "tri")
 @Getter
@@ -29,7 +30,7 @@ public class Tri {
     @Column(name = "distance")
     private Distance distance;
 
-    @Column(name = "time")
-    private String time;
+    @Column(name = "result")
+    private String result;
 }
 
