@@ -30,7 +30,8 @@ public class Tri {
     @Column(name = "distance")
     private Distance distance;
 
-    @Column(name = "result")
-    private String result;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "result_id")
+    private Result result;
 }
 

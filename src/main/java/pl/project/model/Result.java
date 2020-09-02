@@ -4,14 +4,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 
+import javax.persistence.*;
+
 @JsonDeserialize(builder = Result.Builder.class)
+@Entity(name = "result")
 public class Result {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Long id;
     private final String swim;
     private final String t1;
     private final String bike;
     private final String t2;
     private final String run;
     private final String sum;
+
+    @OneToOne(mappedBy = "result")
+    private Tri tri;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     private Result(Builder builder) {
         swim = builder.swim;
