@@ -54,36 +54,36 @@ public class Result {
 
         final String sum;
 
-        Builder(@JsonProperty("sum") String sum) {
+        public Builder(@JsonProperty("sum") String sum) {
             this.sum = sum;
         }
 
-        Builder swim(String swim) {
+        public Builder swim(String swim) {
             this.swim = swim;
             return this;
         }
 
-        Builder t1(String t1) {
+        public Builder t1(String t1) {
             this.t1 = t1;
             return this;
         }
 
-        Builder bike(String bike) {
+        public Builder bike(String bike) {
             this.bike = bike;
             return this;
         }
 
-        Builder t2(String t2) {
+        public Builder t2(String t2) {
             this.t2 = t2;
             return this;
         }
 
-        Builder run(String run) {
+        public Builder run(String run) {
             this.run = run;
             return this;
         }
 
-        Result build() {
+        public Result build() {
             return new Result(this);
         }
 

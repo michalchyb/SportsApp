@@ -1,12 +1,16 @@
 package pl.project.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
 @Table(name = "city")
+@AllArgsConstructor
+@NoArgsConstructor
 public class City {
 
     @Id
