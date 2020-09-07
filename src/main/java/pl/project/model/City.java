@@ -24,6 +24,9 @@ public class City {
     @OneToMany(mappedBy = "city", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Tri> tris;
 
+    public City(long id, String city, double longitude, int latitude, int i) {
+    }
+
     public Long getId() {
         return id;
     }
